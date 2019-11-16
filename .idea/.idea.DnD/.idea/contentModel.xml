@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\kellen.stuart\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kellen.stuart\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_DnD.-949389303.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD" t="IncludeFlat">
+      <e p="Battle" t="IncludeRecursive">
+        <e p="Battle.cs" t="Include" />
+        <e p="Battle.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Battle.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Dice" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="D20.cs" t="Include" />
+        <e p="Dice.cs" t="Include" />
+        <e p="Dice.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Dice.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="DnD.sln" t="IncludeFlat" />
+      <e p="DnDConsoleApp" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DnDConsoleApp.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="DnDConsoleApp.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="DnDWebApp" t="IncludeRecursive">
+        <e p="_Imports.razor" t="Include" />
+        <e p="App.razor" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data" t="Include">
+          <e p="WeatherForecast.cs" t="Include" />
+          <e p="WeatherForecastService.cs" t="Include" />
+        </e>
+        <e p="DnDWebApp.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="DnDWebApp.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pages" t="Include">
+          <e p="_Host.cshtml" t="Include" />
+          <e p="Counter.razor" t="Include" />
+          <e p="Error.razor" t="Include" />
+          <e p="FetchData.razor" t="Include" />
+          <e p="Index.razor" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="MainLayout.razor" t="Include" />
+          <e p="NavMenu.razor" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="bootstrap.min.css" t="Include" />
+              <e p="bootstrap.min.css.map" t="Include" />
+            </e>
+            <e p="open-iconic" t="Include">
+              <e p="font" t="Include">
+                <e p="css" t="Include">
+                  <e p="open-iconic-bootstrap.min.css" t="Include" />
+                </e>
+                <e p="fonts" t="Include">
+                  <e p="open-iconic.eot" t="Include" />
+                  <e p="open-iconic.otf" t="Include" />
+                  <e p="open-iconic.svg" t="Include" />
+                  <e p="open-iconic.ttf" t="Include" />
+                  <e p="open-iconic.woff" t="Include" />
+                </e>
+              </e>
+              <e p="FONT-LICENSE" t="Include" />
+              <e p="ICON-LICENSE" t="Include" />
+              <e p="README.md" t="Include" />
+            </e>
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+        </e>
+      </e>
+      <e p="Monster" t="IncludeRecursive">
+        <e p="AbilityAbstraction" t="Include">
+          <e p="Abilities.cs" t="Include" />
+          <e p="Ability.cs" t="Include" />
+          <e p="Charisma.cs" t="Include" />
+          <e p="Constitution.cs" t="Include" />
+          <e p="Dexterity.cs" t="Include" />
+          <e p="Intelligence.cs" t="Include" />
+          <e p="Strength.cs" t="Include" />
+          <e p="Wisdom.cs" t="Include" />
+        </e>
+        <e p="ActionAbstraction" t="Include">
+          <e p="Action.cs" t="Include" />
+          <e p="MultiAttack.cs" t="Include" />
+        </e>
+        <e p="ArmorAbstraction" t="Include">
+          <e p="ArmorClass.cs" t="Include" />
+          <e p="ArmorType.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ChallengeAbstraction" t="Include">
+          <e p="Challenge.cs" t="Include" />
+        </e>
+        <e p="ConditionAbstraction" t="Include">
+          <e p="Conditions.cs" t="Include" />
+        </e>
+        <e p="DamageAbstraction" t="Include">
+          <e p="DamageType.cs" t="Include" />
+        </e>
+        <e p="HitPoints.cs" t="Include" />
+        <e p="LanguageAbstraction" t="Include">
+          <e p="Language.cs" t="Include" />
+        </e>
+        <e p="Monster.csproj" t="IncludeRecursive" />
+        <e p="MonsterAbstraction" t="Include">
+          <e p="Monster.cs" t="Include" />
+        </e>
+        <e p="Monsters" t="Include">
+          <e p="Glabrezu.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Monster.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SavingThrowsAbstraction" t="Include">
+          <e p="SavingThrows.cs" t="Include" />
+        </e>
+        <e p="SenseAbstraction" t="Include">
+          <e p="PassivePerception.cs" t="Include" />
+          <e p="Sense.cs" t="Include" />
+        </e>
+        <e p="SpecialTraitAbstraction" t="Include">
+          <e p="InnateSpellcasting.cs" t="Include" />
+          <e p="SpecialTrait.cs" t="Include" />
+        </e>
+        <e p="Speed.cs" t="Include" />
+        <e p="SpellAbstraction" t="Include">
+          <e p="Spell.cs" t="Include" />
+          <e p="SpellType.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

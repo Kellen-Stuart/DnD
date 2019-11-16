@@ -1,0 +1,3 @@
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Monster\obj\Debug\netstandard2.0\Monster.csprojAssemblyReference.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Monster\obj\Debug\netstandard2.0\Monster.AssemblyInfoInputs.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Monster\obj\Debug\netstandard2.0\Monster.AssemblyInfo.cs
