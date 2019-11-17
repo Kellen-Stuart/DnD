@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Monster": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "Dice/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -28,6 +41,11 @@
     }
   },
   "libraries": {
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Dice/1.0.0": {
       "type": "project",
       "path": "../Dice/Dice.csproj",
@@ -41,6 +59,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "Common >= 1.0.0",
       "Monster >= 1.0.0"
     ]
   },
@@ -74,6 +93,9 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
+            "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj"
+            },
             "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Monster\\Monster.csproj": {
               "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Monster\\Monster.csproj"
             }

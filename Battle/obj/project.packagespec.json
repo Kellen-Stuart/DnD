@@ -19,6 +19,9 @@
     "frameworks": {
       "netstandard2.1": {
         "projectReferences": {
+          "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj": {
+            "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj"
+          },
           "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Monster\\Monster.csproj": {
             "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Monster\\Monster.csproj"
           }

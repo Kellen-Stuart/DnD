@@ -6,6 +6,7 @@
     <e p="C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD" t="IncludeFlat">
       <e p="Battle" t="IncludeRecursive">
         <e p="Battle.csproj" t="IncludeRecursive" />
+        <e p="BattleMap.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -16,8 +17,88 @@
         </e>
       </e>
       <e p="Common" t="IncludeRecursive">
+        <e p="Abstractions" t="Include">
+          <e p="Abilities" t="Include">
+            <e p="Abilities.cs" t="Include" />
+            <e p="Ability.cs" t="Include" />
+            <e p="Charisma.cs" t="Include" />
+            <e p="Constitution.cs" t="Include" />
+            <e p="Dexterity.cs" t="Include" />
+            <e p="Intelligence.cs" t="Include" />
+            <e p="Strength.cs" t="Include" />
+            <e p="Wisdom.cs" t="Include" />
+          </e>
+          <e p="Actions" t="Include">
+            <e p="Action.cs" t="Include" />
+            <e p="BasicActions" t="Include">
+              <e p="Attack.cs" t="Include" />
+              <e p="Cantrip.cs" t="Include" />
+              <e p="Dash.cs" t="Include" />
+              <e p="Disengage.cs" t="Include" />
+              <e p="Dodge.cs" t="Include" />
+              <e p="Spell.cs" t="Include" />
+            </e>
+            <e p="ChillingGaze.cs" t="Include" />
+            <e p="Claw.cs" t="Include" />
+            <e p="Fist.cs" t="Include" />
+            <e p="MultiAttack.cs" t="Include" />
+            <e p="Pincer.cs" t="Include" />
+            <e p="SummonDemon.cs" t="Include" />
+            <e p="UnarmedStrike.cs" t="Include" />
+          </e>
+          <e p="Armor" t="Include">
+            <e p="ArmorClass.cs" t="Include" />
+            <e p="ArmorType.cs" t="Include" />
+          </e>
+          <e p="Challenge" t="Include">
+            <e p="Challenge.cs" t="Include" />
+          </e>
+          <e p="Character" t="Include">
+            <e p="Character.cs" t="Include" />
+          </e>
+          <e p="Conditions" t="Include">
+            <e p="Condition.cs" t="Include" />
+          </e>
+          <e p="DamageTypes" t="Include">
+            <e p="DamageType.cs" t="Include" />
+          </e>
+          <e p="Languages" t="Include">
+            <e p="Language.cs" t="Include" />
+          </e>
+          <e p="PassiveSkills" t="Include">
+            <e p="FearOfFire.cs" t="Include" />
+            <e p="InnateSpellcasting.cs" t="Include" />
+            <e p="KeenSmell.cs" t="Include" />
+            <e p="MagicResistance.cs" t="Include" />
+            <e p="PassiveSkill.cs" t="Include" />
+            <e p="SnowCamoflage.cs" t="Include" />
+          </e>
+          <e p="PhysicalObject.cs" t="Include" />
+          <e p="SavingThrows" t="Include">
+            <e p="SavingThrows.cs" t="Include" />
+          </e>
+          <e p="Senses" t="Include">
+            <e p="Darkvision.cs" t="Include" />
+            <e p="PassivePerception.cs" t="Include" />
+            <e p="Sense.cs" t="Include" />
+            <e p="TrueSight.cs" t="Include" />
+          </e>
+          <e p="Speed.cs" t="Include" />
+          <e p="Spells" t="Include">
+            <e p="Spell.cs" t="Include" />
+            <e p="SpellType.cs" t="Include" />
+          </e>
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Common.csproj" t="IncludeRecursive" />
+        <e p="Monsters" t="Include">
+          <e p="Glabrezu" t="Include">
+            <e p="Glabrezu.cs" t="Include" />
+          </e>
+          <e p="Yeti" t="Include">
+            <e p="Yeti.cs" t="Include" />
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -25,6 +106,7 @@
             </e>
           </e>
         </e>
+        <e p="Point.cs" t="Include" />
       </e>
       <e p="Currencies" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -79,6 +161,20 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
               <e p="DnDWebApp.AssemblyInfo.cs" t="Include" />
+              <e p="Razor" t="Include">
+                <e p="_Imports.razor.g.cs" t="Include" />
+                <e p="App.razor.g.cs" t="Include" />
+                <e p="Pages" t="Include">
+                  <e p="Counter.razor.g.cs" t="Include" />
+                  <e p="Error.razor.g.cs" t="Include" />
+                  <e p="FetchData.razor.g.cs" t="Include" />
+                  <e p="Index.razor.g.cs" t="Include" />
+                </e>
+                <e p="Shared" t="Include">
+                  <e p="MainLayout.razor.g.cs" t="Include" />
+                  <e p="NavMenu.razor.g.cs" t="Include" />
+                </e>
+              </e>
             </e>
           </e>
         </e>
@@ -178,85 +274,6 @@
               <e p="Merchants.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
-        </e>
-      </e>
-      <e p="Monster" t="IncludeRecursive">
-        <e p="AbilityAbstraction" t="Include">
-          <e p="Abilities.cs" t="Include" />
-          <e p="Ability.cs" t="Include" />
-          <e p="Charisma.cs" t="Include" />
-          <e p="Constitution.cs" t="Include" />
-          <e p="Dexterity.cs" t="Include" />
-          <e p="Intelligence.cs" t="Include" />
-          <e p="Strength.cs" t="Include" />
-          <e p="Wisdom.cs" t="Include" />
-        </e>
-        <e p="ActionAbstraction" t="Include">
-          <e p="Action.cs" t="Include" />
-          <e p="ChillingGaze.cs" t="Include" />
-          <e p="Claw.cs" t="Include" />
-          <e p="Fist.cs" t="Include" />
-          <e p="MultiAttack.cs" t="Include" />
-          <e p="Pincer.cs" t="Include" />
-          <e p="SummonDemon.cs" t="Include" />
-        </e>
-        <e p="ArmorAbstraction" t="Include">
-          <e p="ArmorClass.cs" t="Include" />
-          <e p="ArmorType.cs" t="Include" />
-        </e>
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="ChallengeAbstraction" t="Include">
-          <e p="Challenge.cs" t="Include" />
-        </e>
-        <e p="ConditionAbstraction" t="Include">
-          <e p="Condition.cs" t="Include" />
-        </e>
-        <e p="DamageAbstraction" t="Include">
-          <e p="DamageType.cs" t="Include" />
-        </e>
-        <e p="LanguageAbstraction" t="Include">
-          <e p="Language.cs" t="Include" />
-        </e>
-        <e p="Monster.csproj" t="IncludeRecursive" />
-        <e p="MonsterAbstraction" t="Include">
-          <e p="Monster.cs" t="Include" />
-        </e>
-        <e p="Monsters" t="Include">
-          <e p="Glabrezu" t="Include">
-            <e p="Glabrezu.cs" t="Include" />
-          </e>
-          <e p="Yeti" t="Include">
-            <e p="Yeti.cs" t="Include" />
-          </e>
-        </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Monster.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="PassiveSkillsAbstraction" t="Include">
-          <e p="FearOfFire.cs" t="Include" />
-          <e p="InnateSpellcasting.cs" t="Include" />
-          <e p="KeenSmell.cs" t="Include" />
-          <e p="MagicResistance.cs" t="Include" />
-          <e p="PassiveSkill.cs" t="Include" />
-          <e p="SnowCamoflage.cs" t="Include" />
-        </e>
-        <e p="SavingThrowsAbstraction" t="Include">
-          <e p="SavingThrows.cs" t="Include" />
-        </e>
-        <e p="SenseAbstraction" t="Include">
-          <e p="Darkvision.cs" t="Include" />
-          <e p="PassivePerception.cs" t="Include" />
-          <e p="Sense.cs" t="Include" />
-          <e p="TrueSight.cs" t="Include" />
-        </e>
-        <e p="Speed.cs" t="Include" />
-        <e p="SpellAbstraction" t="Include">
-          <e p="Spell.cs" t="Include" />
-          <e p="SpellType.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
