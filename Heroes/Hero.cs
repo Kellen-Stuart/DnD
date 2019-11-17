@@ -13,9 +13,6 @@ namespace Heroes
         public string Name { get; private set; }
         public int Level { get; private set; }
 
-        public void Action(Monster monster, Action action)
-        {
-            
-        }
+
     }
 }

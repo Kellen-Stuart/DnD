@@ -1,0 +1,8 @@
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\bin\Debug\netstandard2.1\Heroes.deps.json
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\bin\Debug\netstandard2.1\Heroes.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\bin\Debug\netstandard2.1\Heroes.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\obj\Debug\netstandard2.1\Heroes.csprojAssemblyReference.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\obj\Debug\netstandard2.1\Heroes.AssemblyInfoInputs.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\obj\Debug\netstandard2.1\Heroes.AssemblyInfo.cs
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\obj\Debug\netstandard2.1\Heroes.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Heroes\obj\Debug\netstandard2.1\Heroes.pdb

@@ -1,0 +1,7 @@
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\bin\Debug\netstandard2.1\Encounters.deps.json
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\bin\Debug\netstandard2.1\Encounters.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\bin\Debug\netstandard2.1\Encounters.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.AssemblyInfoInputs.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.AssemblyInfo.cs
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.pdb

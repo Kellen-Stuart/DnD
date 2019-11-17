@@ -5,6 +5,7 @@ namespace Monster.LanguageAbstraction
     public enum Language
     {
         Abyssal,
-        Telepathy
+        Telepathy,
+        Yeti
     }
 }

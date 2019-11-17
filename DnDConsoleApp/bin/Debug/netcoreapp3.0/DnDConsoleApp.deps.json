@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.0": {
       "DnDConsoleApp/1.0.0": {
         "dependencies": {
+          "Heroes": "1.0.0",
           "Monster": "1.0.0"
         },
         "runtime": {
@@ -17,6 +18,11 @@
       "Dice/1.0.0": {
         "runtime": {
           "Dice.dll": {}
+        }
+      },
+      "Heroes/1.0.0": {
+        "runtime": {
+          "Heroes.dll": {}
         }
       },
       "Monster/1.0.0": {
@@ -36,6 +42,11 @@
       "sha512": ""
     },
     "Dice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Heroes/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

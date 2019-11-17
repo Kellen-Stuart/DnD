@@ -1,0 +1,7 @@
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\bin\Debug\netstandard2.1\Items.deps.json
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\bin\Debug\netstandard2.1\Items.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\bin\Debug\netstandard2.1\Items.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\obj\Debug\netstandard2.1\Items.AssemblyInfoInputs.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\obj\Debug\netstandard2.1\Items.AssemblyInfo.cs
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\obj\Debug\netstandard2.1\Items.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Items\obj\Debug\netstandard2.1\Items.pdb
