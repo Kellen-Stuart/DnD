@@ -2,38 +2,22 @@
 
 namespace Dice
 {
-    public class Dice
+    public static class Dice
     {
-        public int Rolls { get; private set; }
-        public int NumberOfSides { get; private set; }
-        public int StaticModifier { get; private set; }
-        
-        public Dice(
-            int rolls,
-            int numberOfSides,
-            int staticModifier = 0)
-        {
-            Rolls = rolls;
-            NumberOfSides = numberOfSides;
-            StaticModifier = staticModifier;
-        }
-
-        public int Roll()
+        public static int Roll(int numberOfSides, int rolls)
         {
             var total = 0;
-            for(var i = 0; i < Rolls; i++)
+            for(var i = 0; i < rolls; i++)
             {
-                total += GenerateRandomIntegerBetween(1, NumberOfSides);
+                total += GenerateRandomIntegerBetween(1, numberOfSides);
             }
-
-            total += StaticModifier;
             
             return total;
         }
 
-        private int GenerateRandomIntegerBetween(int min, int max)
+        private static int GenerateRandomIntegerBetween(int min, int max)
         {
-             Random random = new Random();
+             var random = new Random();
              return random.Next(min, (max + 1));
         }
     }

@@ -1,0 +1,37 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Monster/1.0.0": {
+        "dependencies": {
+          "Dice": "1.0.0"
+        },
+        "runtime": {
+          "Monster.dll": {}
+        }
+      },
+      "Dice/1.0.0": {
+        "runtime": {
+          "Dice.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Monster/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

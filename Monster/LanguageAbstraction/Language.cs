@@ -2,8 +2,9 @@ using System.ComponentModel.Design;
 
 namespace Monster.LanguageAbstraction
 {
-    public abstract class Language
+    public enum Language
     {
-        public string Name { get; set; }
+        Abyssal,
+        Telepathy
     }
 }

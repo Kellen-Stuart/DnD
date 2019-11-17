@@ -7,5 +7,21 @@ namespace Monster.AbilityAbstraction
         public Constitution Constitution { get; private set; }
         public Intelligence Intelligence { get; private set; }
         public Wisdom Wisdom { get; private set; }
+        public Charisma Charisma { get; private set; }
+        
+        public Abilities(
+            Strength strength,
+            Dexterity dexterity, 
+            Constitution constitution, 
+            Intelligence intelligence, 
+            Wisdom wisdom, Charisma charisma)
+        {
+            Strength = strength;
+            Dexterity = dexterity;
+            Constitution = constitution;
+            Intelligence = intelligence;
+            Wisdom = wisdom;
+            Charisma = charisma;
+        }
     }
 }

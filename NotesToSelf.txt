@@ -1,0 +1,7 @@
+Features to strive for
+    - Random monster encounter based on party level
+    - Ability to update the state of monsters per turn
+
+
+Possible outcome of Actions
+    - Could inflict damage on monster / hero

@@ -1,0 +1,13 @@
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Battle.deps.json
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Battle.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Battle.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Dice.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Monster.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Monster.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\bin\Debug\netstandard2.1\Dice.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\obj\Debug\netstandard2.1\Battle.csprojAssemblyReference.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\obj\Debug\netstandard2.1\Battle.AssemblyInfoInputs.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\obj\Debug\netstandard2.1\Battle.AssemblyInfo.cs
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\obj\Debug\netstandard2.1\Battle.csproj.CopyComplete
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\obj\Debug\netstandard2.1\Battle.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Battle\obj\Debug\netstandard2.1\Battle.pdb

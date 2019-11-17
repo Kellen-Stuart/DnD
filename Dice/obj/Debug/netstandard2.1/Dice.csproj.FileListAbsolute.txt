@@ -1,0 +1,8 @@
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\bin\Debug\netstandard2.1\Dice.deps.json
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\bin\Debug\netstandard2.1\Dice.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\bin\Debug\netstandard2.1\Dice.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\obj\Debug\netstandard2.1\Dice.csprojAssemblyReference.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\obj\Debug\netstandard2.1\Dice.AssemblyInfoInputs.cache
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\obj\Debug\netstandard2.1\Dice.AssemblyInfo.cs
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\obj\Debug\netstandard2.1\Dice.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Dice\obj\Debug\netstandard2.1\Dice.pdb

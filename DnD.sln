@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDConsoleApp", "DnDConsole
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle", "Battle\Battle.csproj", "{3430E4D9-ECFF-45AD-A855-16EA9BDF1D5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes", "Heroes\Heroes.csproj", "{C4246EC3-5FA7-488C-89A0-017985FF498B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{053D1211-B8DA-42D9-92FC-77E87E9DC491}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3430E4D9-ECFF-45AD-A855-16EA9BDF1D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3430E4D9-ECFF-45AD-A855-16EA9BDF1D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3430E4D9-ECFF-45AD-A855-16EA9BDF1D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4246EC3-5FA7-488C-89A0-017985FF498B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4246EC3-5FA7-488C-89A0-017985FF498B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4246EC3-5FA7-488C-89A0-017985FF498B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4246EC3-5FA7-488C-89A0-017985FF498B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053D1211-B8DA-42D9-92FC-77E87E9DC491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053D1211-B8DA-42D9-92FC-77E87E9DC491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053D1211-B8DA-42D9-92FC-77E87E9DC491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053D1211-B8DA-42D9-92FC-77E87E9DC491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

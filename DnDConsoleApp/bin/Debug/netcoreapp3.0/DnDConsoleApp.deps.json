@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "DnDConsoleApp/1.0.0": {
+        "dependencies": {
+          "Monster": "1.0.0"
+        },
+        "runtime": {
+          "DnDConsoleApp.dll": {}
+        }
+      },
+      "Dice/1.0.0": {
+        "runtime": {
+          "Dice.dll": {}
+        }
+      },
+      "Monster/1.0.0": {
+        "dependencies": {
+          "Dice": "1.0.0"
+        },
+        "runtime": {
+          "Monster.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DnDConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Monster/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

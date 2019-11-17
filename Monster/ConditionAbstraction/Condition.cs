@@ -1,6 +1,6 @@
 namespace Monster.ConditionAbstraction
 {
-    public enum Conditions
+    public enum Condition
     {
         Blinded,
         Charmed,

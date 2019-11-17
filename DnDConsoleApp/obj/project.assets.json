@@ -1,11 +1,64 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "Dice/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Dice.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dice.dll": {}
+        }
+      },
+      "Heroes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Heroes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Heroes.dll": {}
+        }
+      },
+      "Monster/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Dice": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Monster.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Monster.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dice/1.0.0": {
+      "type": "project",
+      "path": "../Dice/Dice.csproj",
+      "msbuildProject": "../Dice/Dice.csproj"
+    },
+    "Heroes/1.0.0": {
+      "type": "project",
+      "path": "../Heroes/Heroes.csproj",
+      "msbuildProject": "../Heroes/Heroes.csproj"
+    },
+    "Monster/1.0.0": {
+      "type": "project",
+      "path": "../Monster/Monster.csproj",
+      "msbuildProject": "../Monster/Monster.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "Heroes >= 1.0.0",
+      "Monster >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\kellen.stuart\\.nuget\\packages\\": {},
@@ -36,7 +89,14 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Heroes\\Heroes.csproj": {
+              "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Heroes\\Heroes.csproj"
+            },
+            "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Monster\\Monster.csproj": {
+              "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Monster\\Monster.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
