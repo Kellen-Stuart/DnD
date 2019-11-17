@@ -5,3 +5,4 @@ C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandar
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.AssemblyInfo.cs
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.dll
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Encounters\obj\Debug\netstandard2.1\Encounters.csprojAssemblyReference.cache

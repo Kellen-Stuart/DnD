@@ -49,7 +49,7 @@ namespace Common.Abstractions.Character
             IEnumerable<Sense> senses,
             IEnumerable<Language> languages,
             Challenge.Challenge challenge,
-            IEnumerable<Action> actions, 
+            IEnumerable<Action> actions,
             IEnumerable<PassiveSkill> passiveSkills,
             Point pointOnMap)
         {
@@ -88,7 +88,10 @@ namespace Common.Abstractions.Character
         public bool ImmuneTo(DamageType damageType)
         {
             if (DamageImmunities.Contains(damageType))
+            {
+                Console.WriteLine($"Immune to {damageType}");
                 return true;
+            }
 
             return false;
         }
@@ -96,7 +99,10 @@ namespace Common.Abstractions.Character
         public bool ResistantTo(DamageType damageType)
         {
             if (DamageResistances.Contains(damageType))
+            {
+                Console.WriteLine($"Resistance to {damageType}");
                 return true;
+            }
 
             return false;
         }

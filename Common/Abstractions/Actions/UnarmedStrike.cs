@@ -1,17 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Common.Abstractions.Abilities;
 using Common.Abstractions.Actions.BasicActions;
 using Common.Abstractions.DamageTypes;
 
 namespace Common.Abstractions.Actions
 {
-    public class UnarmedStrike : Attack
+    public class UnarmedStrike : MeleeAttack
     {
         private readonly int _strengthModifier;
         
-        public UnarmedStrike(int strengthModifier)
+        public UnarmedStrike(int strengthModifier, int proficiency)
         {
             _strengthModifier = strengthModifier;
             Range = 5;

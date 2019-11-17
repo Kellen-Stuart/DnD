@@ -18,8 +18,8 @@
           </e>
           <e p="Actions" t="Include">
             <e p="Action.cs" t="Include" />
+            <e p="Attack.cs" t="Include" />
             <e p="BasicActions" t="Include">
-              <e p="Attack.cs" t="Include" />
               <e p="Cantrip.cs" t="Include" />
               <e p="Dash.cs" t="Include" />
               <e p="Disengage.cs" t="Include" />
@@ -29,6 +29,7 @@
             <e p="ChillingGaze.cs" t="Include" />
             <e p="Claw.cs" t="Include" />
             <e p="Fist.cs" t="Include" />
+            <e p="MeleeAttack.cs" t="Include" />
             <e p="MultiAttack.cs" t="Include" />
             <e p="Pincer.cs" t="Include" />
             <e p="SummonDemon.cs" t="Include" />
