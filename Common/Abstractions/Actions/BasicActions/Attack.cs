@@ -9,8 +9,6 @@ namespace Common.Abstractions.Actions.BasicActions
 
         public DamageType DamageType { get; protected set; }
 
-        public abstract void ExecuteAttack(PhysicalObject attacker, PhysicalObject receiver);
-
-        public abstract void ExecuteAttack(PhysicalObject attacker, IEnumerable<PhysicalObject> receivers);
+        public abstract void Execute(Character.Character attacker, IEnumerable<Character.Character> receivers);
     }
 }

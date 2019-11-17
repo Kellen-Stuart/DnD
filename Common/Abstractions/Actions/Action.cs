@@ -1,7 +1,6 @@
 namespace Common.Abstractions.Actions
 {
-    public abstract class Action
+    public interface Action
     {
-        
     }
 }
