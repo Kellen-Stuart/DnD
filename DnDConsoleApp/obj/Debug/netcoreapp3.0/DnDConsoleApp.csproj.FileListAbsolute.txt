@@ -16,3 +16,5 @@ C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\DnDConsoleApp\obj\Debug\netcore
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\DnDConsoleApp\obj\Debug\netcoreapp3.0\DnDConsoleApp.pdb
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\DnDConsoleApp\bin\Debug\netcoreapp3.0\Heroes.dll
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\DnDConsoleApp\bin\Debug\netcoreapp3.0\Heroes.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\DnDConsoleApp\bin\Debug\netcoreapp3.0\Common.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\DnDConsoleApp\bin\Debug\netcoreapp3.0\Common.pdb

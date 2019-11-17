@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Common.Abstractions.DamageTypes;
 
@@ -9,6 +10,14 @@ namespace Common.Abstractions.Actions.BasicActions
 
         public DamageType DamageType { get; protected set; }
 
-        public abstract void Execute(Character.Character attacker, IEnumerable<Character.Character> receivers);
+        // One downside of inheriting from Action
+        public void Execute()
+        {
+            throw new Exception("Attacks must target an enemy");
+        }
+        public abstract void Execute(Character.Character character);
+
+        public abstract void Execute(IEnumerable<Character.Character> characters);
+
     }
 }

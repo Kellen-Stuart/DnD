@@ -1,9 +1,11 @@
-﻿using System;
-using System.Text.Json;
-using Heroes;
-using Monster.AbilityAbstraction;
-using Monster.DamageAbstraction;
-using Monster.Monsters;
+﻿
+
+using System;
+using System.Collections.Generic;
+using Common;
+using Common.Abstractions.Actions.BasicActions;
+using Common.Abstractions.Character;
+using Common.Monsters.Glabrezu;
 
 namespace DnDConsoleApp
 {
@@ -11,10 +13,8 @@ namespace DnDConsoleApp
     {
         static void Main(string[] args)
         {
-            var girthGurdur = new Hero("Girth Gurdur", 5);
-            var glabrezu = new Glabrezu();
-            Console.WriteLine(glabrezu.HitPoints);
-            glabrezu.TakeDamage(50, DamageType.Poison);
+            var glabrezu = new Glabrezu(new Point(0, 0));
+            var goodGlabrezu = new Glabrezu(new Point(1, 0));
         }
     }
 }

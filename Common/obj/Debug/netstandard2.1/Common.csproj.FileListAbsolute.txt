@@ -6,3 +6,8 @@ C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\obj\Debug\netstandard2.1
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\obj\Debug\netstandard2.1\Common.AssemblyInfo.cs
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\obj\Debug\netstandard2.1\Common.dll
 C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\obj\Debug\netstandard2.1\Common.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\bin\Debug\netstandard2.1\Dice.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\bin\Debug\netstandard2.1\Monster.dll
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\bin\Debug\netstandard2.1\Dice.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\bin\Debug\netstandard2.1\Monster.pdb
+C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Common\obj\Debug\netstandard2.1\Common.csproj.CopyComplete

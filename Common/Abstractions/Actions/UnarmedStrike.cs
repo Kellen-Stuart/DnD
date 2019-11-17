@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Common.Abstractions.Abilities;
 using Common.Abstractions.Actions.BasicActions;
 using Common.Abstractions.DamageTypes;
 
@@ -8,22 +9,24 @@ namespace Common.Abstractions.Actions
 {
     public class UnarmedStrike : Attack
     {
-        public UnarmedStrike()
+        private readonly int _strengthModifier;
+        
+        public UnarmedStrike(int strengthModifier)
         {
+            _strengthModifier = strengthModifier;
             Range = 5;
             DamageType = DamageType.Bludgeoning;
         }
 
-        public override void Execute(Character.Character attacker, IEnumerable<Character.Character> receivers)
+        public override void Execute(Character.Character receiver)
         {
-            if(receivers.Count() != 1)
-                throw new Exception("Cannot hit more than one enemy with Unarmed Strike");
-            
-            var damage = attacker.Abilities.Strength.Modifier + 1;
-            foreach (var receiver in receivers)
-            {
-                receiver.TakeDamage(damage, DamageType, 1);
-            }
+            //var damage = attacker.Abilities.Strength.Modifier + 1;
+            receiver.TakeDamage( _strengthModifier +  1, DamageType, 1);
+        }
+
+        public override void Execute(IEnumerable<Character.Character> characters)
+        {
+            throw new Exception("Unable to perform Unarmed Strike on multiple enemies");
         }
     }
 }

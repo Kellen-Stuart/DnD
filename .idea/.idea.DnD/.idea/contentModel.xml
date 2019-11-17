@@ -4,18 +4,6 @@
     <e p="C:\Users\kellen.stuart\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\kellen.stuart\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_DnD.-949389303.00" t="ExcludeRecursive" />
     <e p="C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD" t="IncludeFlat">
-      <e p="Battle" t="IncludeRecursive">
-        <e p="Battle.csproj" t="IncludeRecursive" />
-        <e p="BattleMap.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Battle.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
       <e p="Common" t="IncludeRecursive">
         <e p="Abstractions" t="Include">
           <e p="Abilities" t="Include">
@@ -234,18 +222,6 @@
           </e>
         </e>
         <e p="RandomEncounter.cs" t="Include" />
-      </e>
-      <e p="Heroes" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Hero.cs" t="Include" />
-        <e p="Heroes.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Heroes.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
       <e p="Items" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

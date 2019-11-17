@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Common.Abstractions.Actions;
@@ -8,6 +9,7 @@ using Common.Abstractions.Languages;
 using Monster.PassiveSkillsAbstraction;
 using Monster.SavingThrowsAbstraction;
 using Monster.SenseAbstraction;
+using Action = Common.Abstractions.Actions.Action;
 using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
 
@@ -35,7 +37,6 @@ namespace Common.Abstractions.Character
 
         private readonly int _initiativeRoll = Dice.Dice.Roll(20, 1);
 
-
         public Character(
             ArmorClass armorClass,
             int hitPoints,
@@ -48,7 +49,8 @@ namespace Common.Abstractions.Character
             IEnumerable<Sense> senses,
             IEnumerable<Language> languages,
             Challenge.Challenge challenge,
-            IEnumerable<Action> actions, IEnumerable<PassiveSkill> passiveSkills,
+            IEnumerable<Action> actions, 
+            IEnumerable<PassiveSkill> passiveSkills,
             Point pointOnMap)
         {
             ArmorClass = armorClass;

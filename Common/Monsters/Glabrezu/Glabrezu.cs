@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Common.Abstractions.Abilities;
 using Common.Abstractions.Actions;
 using Common.Abstractions.Armor;
@@ -10,6 +12,7 @@ using Common.Abstractions.Languages;
 using Common.Abstractions.PassiveSkills;
 using Common.Abstractions.SavingThrows;
 using Common.Abstractions.Senses;
+using Action = Common.Abstractions.Actions.Action;
 
 namespace Common.Monsters.Glabrezu
 {
@@ -71,10 +74,7 @@ namespace Common.Monsters.Glabrezu
                 },
                 actions: new List<Action>
                 {
-//                    new MultiAttack(),
-//                    new Pincer(),
-//                    new Fist(),
-//                    new SummonDemon()
+                    new UnarmedStrike(5)
                 },
                 pointOnMap: pointOnMap
             )

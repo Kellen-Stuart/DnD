@@ -19,6 +19,9 @@
     "frameworks": {
       "netcoreapp3.0": {
         "projectReferences": {
+          "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj": {
+            "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj"
+          },
           "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Heroes\\Heroes.csproj": {
             "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Heroes\\Heroes.csproj"
           },
