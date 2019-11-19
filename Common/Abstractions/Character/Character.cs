@@ -1,14 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Common.Abstractions.Actions;
 using Common.Abstractions.Armor;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
-using Monster.PassiveSkillsAbstraction;
-using Monster.SavingThrowsAbstraction;
-using Monster.SenseAbstraction;
 using Action = Common.Abstractions.Actions.Action;
 using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
@@ -50,8 +46,7 @@ namespace Common.Abstractions.Character
             IEnumerable<Language> languages,
             Challenge.Challenge challenge,
             IEnumerable<Action> actions,
-            IEnumerable<PassiveSkill> passiveSkills,
-            Point pointOnMap)
+            IEnumerable<PassiveSkill> passiveSkills)
         {
             ArmorClass = armorClass;
             HitPoints = hitPoints;
@@ -64,7 +59,6 @@ namespace Common.Abstractions.Character
             Challenge = challenge;
             Actions = actions;
             PassiveSkills = passiveSkills;
-            PointOnMap = pointOnMap;
         }
 
         public void TakeDamage(int damage, DamageType damageType, int numberOfHits = 1)

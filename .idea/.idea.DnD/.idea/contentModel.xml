@@ -63,6 +63,7 @@
             <e p="SnowCamoflage.cs" t="Include" />
           </e>
           <e p="PhysicalObject.cs" t="Include" />
+          <e p="ProficiencyBonus.cs" t="Include" />
           <e p="SavingThrows" t="Include">
             <e p="SavingThrows.cs" t="Include" />
           </e>
@@ -150,20 +151,6 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
               <e p="DnDWebApp.AssemblyInfo.cs" t="Include" />
-              <e p="Razor" t="Include">
-                <e p="_Imports.razor.g.cs" t="Include" />
-                <e p="App.razor.g.cs" t="Include" />
-                <e p="Pages" t="Include">
-                  <e p="Counter.razor.g.cs" t="Include" />
-                  <e p="Error.razor.g.cs" t="Include" />
-                  <e p="FetchData.razor.g.cs" t="Include" />
-                  <e p="Index.razor.g.cs" t="Include" />
-                </e>
-                <e p="Shared" t="Include">
-                  <e p="MainLayout.razor.g.cs" t="Include" />
-                  <e p="NavMenu.razor.g.cs" t="Include" />
-                </e>
-              </e>
             </e>
           </e>
         </e>

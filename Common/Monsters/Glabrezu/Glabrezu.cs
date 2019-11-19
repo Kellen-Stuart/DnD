@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Common.Abstractions.Abilities;
 using Common.Abstractions.Actions;
 using Common.Abstractions.Armor;
@@ -18,7 +16,7 @@ namespace Common.Monsters.Glabrezu
 {
     public class Glabrezu : Character
     {
-        public Glabrezu(Point pointOnMap) :
+        public Glabrezu() :
             base(
                 armorClass: new ArmorClass(17),
                 hitPoints: Dice.Dice.Roll(
@@ -75,8 +73,7 @@ namespace Common.Monsters.Glabrezu
                 actions: new List<Action>
                 {
                     new UnarmedStrike(5)
-                },
-                pointOnMap: pointOnMap
+                }
             )
         {
         }
