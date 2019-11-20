@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Common.Abstractions.Abilities;
 using Common.Abstractions.Actions;
+using Common.Abstractions.Actions.Basic;
 using Common.Abstractions.Armor;
 using Common.Abstractions.Challenge;
 using Common.Abstractions.Character;
@@ -10,7 +11,6 @@ using Common.Abstractions.Languages;
 using Common.Abstractions.PassiveSkills;
 using Common.Abstractions.SavingThrows;
 using Common.Abstractions.Senses;
-using Action = Common.Abstractions.Actions.Action;
 
 namespace Common.Monsters.Glabrezu
 {
@@ -32,6 +32,7 @@ namespace Common.Monsters.Glabrezu
                     wisdom: new Wisdom(17, 3),
                     charisma: new Charisma(16, 3)
                 ),
+                spellCastingAbility: Abilities.AbilityEnum.Intelligence,
                 savingThrows: new SavingThrows(
                     strengthModifier: 9,
                     constitutionModifier: 9,
@@ -70,10 +71,12 @@ namespace Common.Monsters.Glabrezu
                     new InnateSpellcasting(),
                     new MagicResistance()
                 },
-                actions: new List<Action>
+                actions: new List<IAction>
                 {
                     new UnarmedStrike(5)
-                }
+                },
+                size: new System.Drawing.Size(10, 10),
+                reach: 10
             )
         {
         }

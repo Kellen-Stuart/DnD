@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Numerics;
 
 namespace Common.Abstractions.Actions
 {
@@ -7,13 +9,11 @@ namespace Common.Abstractions.Actions
     {
         public override void Execute()
         {
-            throw new Exception("Melee Attacks must target an enemy");
+            throw new Exception("Melee Attacks must target a character");
         }
         
-        public abstract override void Execute(Character.Character character);
+        public abstract override void Execute(Vector3 point);
 
-        public abstract override void Execute(IEnumerable<Character.Character> characters);
-
-        
+        public abstract override void Execute(IEnumerable<Vector3> points);
     }
 }

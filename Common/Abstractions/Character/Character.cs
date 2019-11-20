@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Common.Abstractions.Actions;
+using Common.Abstractions.Actions.Basic;
 using Common.Abstractions.Armor;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
-using Action = Common.Abstractions.Actions.Action;
 using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
 
@@ -19,6 +20,8 @@ namespace Common.Abstractions.Character
 
         public Abilities.Abilities Abilities { get; private set; }
 
+        public Abilities.Abilities.AbilityEnum SpellCastingAbility { get; private set; }
+
         public SavingThrows.SavingThrows SavingThrows { get; private set; }
 
         public IEnumerable<Sense> Senses { get; private set; }
@@ -29,15 +32,23 @@ namespace Common.Abstractions.Character
 
         public IEnumerable<PassiveSkill> PassiveSkills { get; private set; }
 
+        public IEnumerable<IAction> Actions { get; set; }
+
+        public IEnumerable<IAction> BasicActions { get; set; }
+
+        public int Reach { get; private set; }
+
         public int Initiative => Abilities.Dexterity.Modifier + _initiativeRoll;
 
         private readonly int _initiativeRoll = Dice.Dice.Roll(20, 1);
+
 
         public Character(
             ArmorClass armorClass,
             int hitPoints,
             int speed,
             Abilities.Abilities abilities,
+            Abilities.Abilities.AbilityEnum spellCastingAbility,
             SavingThrows.SavingThrows savingThrows,
             IEnumerable<DamageType> damageResistances,
             IEnumerable<DamageType> damageImmunities,
@@ -45,13 +56,16 @@ namespace Common.Abstractions.Character
             IEnumerable<Sense> senses,
             IEnumerable<Language> languages,
             Challenge.Challenge challenge,
-            IEnumerable<Action> actions,
-            IEnumerable<PassiveSkill> passiveSkills)
+            IEnumerable<IAction> actions,
+            IEnumerable<PassiveSkill> passiveSkills,
+            System.Drawing.Size size,
+            int reach)
         {
             ArmorClass = armorClass;
             HitPoints = hitPoints;
             Speed = speed;
             Abilities = abilities;
+            SpellCastingAbility = spellCastingAbility;
             SavingThrows = savingThrows;
             DamageResistances = damageResistances;
             DamageImmunities = damageImmunities;
@@ -59,46 +73,14 @@ namespace Common.Abstractions.Character
             Challenge = challenge;
             Actions = actions;
             PassiveSkills = passiveSkills;
-        }
-
-        public void TakeDamage(int damage, DamageType damageType, int numberOfHits = 1)
-        {
-            // Immunity
-            if (this.ImmuneTo(damageType))
-                return;
-
-            // Resistance
-            if (this.ResistantTo(damageType))
+            Size = size;
+            Reach = reach;
+            
+            // Basic Actions - common to every character
+            BasicActions = new List<IAction>
             {
-                HitPoints -= (damage / 2);
-                return;
-            }
-
-            // Condition?
-
-            HitPoints -= damage;
-        }
-
-        public bool ImmuneTo(DamageType damageType)
-        {
-            if (DamageImmunities.Contains(damageType))
-            {
-                Console.WriteLine($"Immune to {damageType}");
-                return true;
-            }
-
-            return false;
-        }
-
-        public bool ResistantTo(DamageType damageType)
-        {
-            if (DamageResistances.Contains(damageType))
-            {
-                Console.WriteLine($"Resistance to {damageType}");
-                return true;
-            }
-
-            return false;
+                new UnarmedStrike(Abilities.Strength.Modifier)
+            };
         }
     }
 }

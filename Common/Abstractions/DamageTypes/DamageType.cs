@@ -14,6 +14,7 @@ namespace Common.Abstractions.DamageTypes
         Psychic,
         Radiant,
         Slashing,
-        Thunder
+        Thunder,
+        MagicalPhysical
     }
 }

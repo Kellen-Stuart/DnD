@@ -1,4 +1,4 @@
-namespace Common.Abstractions.Actions.BasicActions
+namespace Common.Abstractions.Actions
 {
     public abstract class Spell : Monster.ActionAbstraction.Action
     {

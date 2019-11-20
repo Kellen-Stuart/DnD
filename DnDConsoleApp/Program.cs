@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Common;
 using Common.Abstractions.Actions.BasicActions;
 using Common.Abstractions.Character;
@@ -12,8 +13,8 @@ namespace DnDConsoleApp
     {
         static void Main(string[] args)
         {
-            var glabrezu = new Glabrezu(new Point(0, 0));
-            var goodGlabrezu = new Glabrezu(new Point(1, 0));
+            var glabrezu = new Glabrezu();
+            var goodGlabrezu = new Glabrezu();
 
             while (glabrezu.HitPoints > 0 && goodGlabrezu.HitPoints > 0)
             {

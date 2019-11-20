@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using System.Drawing;
+using System.Numerics;
 
 namespace Common.Abstractions.Actions
 {
-    public interface Action
+    public interface IAction
     {
         void Execute();
-        void Execute(Character.Character character);
-        void Execute(IEnumerable<Character.Character> characters);
+        void Execute(Vector3 point);
+        void Execute(IEnumerable<Vector3> points);
     }
 }

@@ -23,5 +23,14 @@ namespace Common.Abstractions.Abilities
             Wisdom = wisdom;
             Charisma = charisma;
         }
+
+        public enum AbilityEnum
+        {
+            Strength,
+            Dexterity,
+            Constitution,
+            Intelligence,
+            Wisdom
+        }
     }
 }
