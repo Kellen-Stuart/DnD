@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Monster": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
+      "Dice/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Dice.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dice.dll": {}
+        }
+      },
+      "Monster/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Dice": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Monster.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Monster.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
+    "Dice/1.0.0": {
+      "type": "project",
+      "path": "../Dice/Dice.csproj",
+      "msbuildProject": "../Dice/Dice.csproj"
+    },
+    "Monster/1.0.0": {
+      "type": "project",
+      "path": "../Monster/Monster.csproj",
+      "msbuildProject": "../Monster/Monster.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Common >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kellen.stuart\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\ConsoleAppForThisWeekend\\ConsoleAppForThisWeekend.csproj",
+      "projectName": "ConsoleAppForThisWeekend",
+      "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\ConsoleAppForThisWeekend\\ConsoleAppForThisWeekend.csproj",
+      "packagesPath": "C:\\Users\\kellen.stuart\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\ConsoleAppForThisWeekend\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\kellen.stuart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\kellen.stuart\\Desktop\\Personal\\Repo\\DnD\\Common\\Common.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

@@ -1,7 +1,13 @@
 Features to strive for
     - Random monster encounter based on party level
     - Ability to update the state of monsters per turn
+    - Admin override
+        - if there's a bug in the application,
+            you'd want to be able to manually override
 
-
-Possible outcome of Actions
-    - Could inflict damage on monster / hero
+Things that are missing
+    - State - things need to be stored in a database
+    - Interface to apply damage to a specific monster
+    - Expose the "Take Damage" Method
+    - Create a "Select Action -> Do Damage" Method
+    - Create a "Status of Monster" Method 
