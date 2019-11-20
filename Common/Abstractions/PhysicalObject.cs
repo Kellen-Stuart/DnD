@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using Common.Abstractions.DamageTypes;
 
 namespace Common.Abstractions
 {
     public abstract class PhysicalObject
     {
-        public Point PointOnMap { get; set; }
+        public Vector3 PointOnMap { get; set; }
         public int HitPoints { get; set; }
         public IEnumerable<DamageType> DamageResistances { get; set; }
         public IEnumerable<DamageType> DamageImmunities { get; set; }

@@ -18,7 +18,16 @@ namespace Common.Abstractions.Actions.Basic
 
         public override void Execute(Vector3 point)
         {
-            point.TakeDamage( _strengthModifier +  1, DamageType, 1);
+            // Does a physical object exist at that point? 
+            var physicalObject = Map.MapObject.GetPhysicalObject(point);
+            if (physicalObject != null)
+            {
+                physicalObject.TakeDamage( _strengthModifier +  1, DamageType, 1);
+            }
+            else
+            {
+                Console.WriteLine($"There is no physical object {point.ToString()}");
+            }
         }
 
         public override void Execute(IEnumerable<Vector3> points)

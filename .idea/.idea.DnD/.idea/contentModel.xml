@@ -84,7 +84,7 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Common.csproj" t="IncludeRecursive" />
-        <e p="Map.cs" t="Include" />
+        <e p="MapObject.cs" t="Include" />
         <e p="Monsters" t="Include">
           <e p="Glabrezu" t="Include">
             <e p="Glabrezu.cs" t="Include" />

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using Common;
-using Common.Abstractions.Actions.BasicActions;
 using Common.Abstractions.Character;
 using Common.Monsters.Glabrezu;
 
@@ -15,6 +13,8 @@ namespace DnDConsoleApp
         {
             var glabrezu = new Glabrezu();
             var goodGlabrezu = new Glabrezu();
+            Map.MapObject.AddPhysicalObject(glabrezu, new Vector3(0, 0, 0));
+            Map.MapObject.AddPhysicalObject(goodGlabrezu, new Vector3(1,1, 0));
 
             while (glabrezu.HitPoints > 0 && goodGlabrezu.HitPoints > 0)
             {
@@ -46,7 +46,7 @@ namespace DnDConsoleApp
 
             int choice = int.Parse(Console.ReadKey().KeyChar.ToString());
             Console.WriteLine("");
-            character.Actions.ElementAt(choice).Execute(enemy);
+            character.Actions.ElementAt(choice).Execute(enemy.PointOnMap);
         }
     }
 }
