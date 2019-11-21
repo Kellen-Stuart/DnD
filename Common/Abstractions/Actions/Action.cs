@@ -9,5 +9,7 @@ namespace Common.Abstractions.Actions
         void Execute();
         void Execute(Vector3 point);
         void Execute(IEnumerable<Vector3> points);
+        void Execute(PhysicalObject physicalObject);
+        void Execute(IEnumerable<PhysicalObject> physicalObjects);
     }
 }

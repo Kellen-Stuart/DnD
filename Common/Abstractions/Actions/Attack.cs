@@ -21,5 +21,10 @@ namespace Common.Abstractions.Actions
         public abstract void Execute(Vector3 point);
 
         public abstract void Execute(IEnumerable<Vector3> points);
+
+        public abstract void Execute(PhysicalObject physicalObject);
+
+        public abstract void Execute(IEnumerable<PhysicalObject> physicalObjects);
+
     }
 }

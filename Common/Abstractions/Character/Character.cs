@@ -14,29 +14,29 @@ namespace Common.Abstractions.Character
 {
     public abstract class Character : PhysicalObject
     {
-        public ArmorClass ArmorClass { get; private set; }
+        public ArmorClass ArmorClass { get; set; }
 
-        public int Speed { get; private set; }
+        public int Speed { get; set; }
 
-        public Abilities.Abilities Abilities { get; private set; }
+        public Abilities.Abilities Abilities { get; set; }
 
-        public Abilities.Abilities.AbilityEnum SpellCastingAbility { get; private set; }
+        public Abilities.Abilities.AbilityEnum SpellCastingAbility { get; set; }
 
-        public SavingThrows.SavingThrows SavingThrows { get; private set; }
+        public SavingThrows.SavingThrows SavingThrows { get; set; }
 
-        public IEnumerable<Sense> Senses { get; private set; }
+        public IEnumerable<Sense> Senses { get; set; }
 
-        public IEnumerable<Language> Languages { get; private set; }
+        public IEnumerable<Language> Languages { get; set; }
 
-        public Challenge.Challenge Challenge { get; private set; }
+        public Challenge.Challenge Challenge { get; set; }
 
-        public IEnumerable<PassiveSkill> PassiveSkills { get; private set; }
+        public IEnumerable<PassiveSkill> PassiveSkills { get; set; }
 
         public IEnumerable<IAction> Actions { get; set; }
 
         public IEnumerable<IAction> BasicActions { get; set; }
 
-        public int Reach { get; private set; }
+        public int Reach { get; set; }
 
         public int Initiative => Abilities.Dexterity.Modifier + _initiativeRoll;
 
