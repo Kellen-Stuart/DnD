@@ -1,7 +1,0 @@
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\bin\Debug\netstandard2.1\Merchants.deps.json
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\bin\Debug\netstandard2.1\Merchants.dll
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\bin\Debug\netstandard2.1\Merchants.pdb
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\obj\Debug\netstandard2.1\Merchants.AssemblyInfoInputs.cache
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\obj\Debug\netstandard2.1\Merchants.AssemblyInfo.cs
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\obj\Debug\netstandard2.1\Merchants.dll
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Merchants\obj\Debug\netstandard2.1\Merchants.pdb

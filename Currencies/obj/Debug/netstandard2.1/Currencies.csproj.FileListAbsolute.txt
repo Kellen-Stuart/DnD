@@ -1,8 +1,0 @@
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\bin\Debug\netstandard2.1\Currencies.deps.json
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\bin\Debug\netstandard2.1\Currencies.dll
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\bin\Debug\netstandard2.1\Currencies.pdb
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\obj\Debug\netstandard2.1\Currencies.AssemblyInfoInputs.cache
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\obj\Debug\netstandard2.1\Currencies.AssemblyInfo.cs
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\obj\Debug\netstandard2.1\Currencies.dll
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\obj\Debug\netstandard2.1\Currencies.pdb
-C:\Users\kellen.stuart\Desktop\Personal\Repo\DnD\Currencies\obj\Debug\netstandard2.1\Currencies.csprojAssemblyReference.cache
