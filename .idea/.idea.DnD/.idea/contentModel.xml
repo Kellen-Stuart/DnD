@@ -107,7 +107,6 @@
           <e p="Zazu.cs" t="Include" />
         </e>
         <e p="Round.cs" t="Include" />
-        <e p="Turn.cs" t="Include" />
       </e>
       <e p="ConsoleAppForThisWeekend" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
