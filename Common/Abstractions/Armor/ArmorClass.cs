@@ -1,5 +1,4 @@
-﻿using Monster;
-
+﻿
 namespace Common.Abstractions.Armor
 {
     public class ArmorClass

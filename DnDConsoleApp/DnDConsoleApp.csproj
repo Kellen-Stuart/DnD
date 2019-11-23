@@ -7,8 +7,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
-      <ProjectReference Include="..\Heroes\Heroes.csproj" />
-      <ProjectReference Include="..\Monster\Monster.csproj" />
     </ItemGroup>
 
 </Project>

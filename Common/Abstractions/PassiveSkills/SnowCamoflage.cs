@@ -1,9 +1,9 @@
-using Monster.PassiveSkillsAbstraction;
-
-namespace Common.Abstractions.PassiveSkills
-{
-    public class SnowCamouflage : PassiveSkill
-    {
-        
-    }
-}
+//using Monster.PassiveSkillsAbstraction;
+//
+//namespace Common.Abstractions.PassiveSkills
+//{
+//    public class SnowCamouflage : PassiveSkill
+//    {
+//        
+//    }
+//}

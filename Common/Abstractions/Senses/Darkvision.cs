@@ -1,9 +1,9 @@
-using Monster.SenseAbstraction;
-
-namespace Common.Abstractions.Senses
-{
-    public class Darkvision : Sense
-    {
-        
-    }
-}
+//using Monster.SenseAbstraction;
+//
+//namespace Common.Abstractions.Senses
+//{
+//    public class Darkvision : Sense
+//    {
+//        
+//    }
+//}

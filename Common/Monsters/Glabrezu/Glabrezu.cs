@@ -57,7 +57,7 @@ namespace Common.Monsters.Glabrezu
                 },
                 senses: new List<Sense>
                 {
-                    new TrueSight(),
+                    //new TrueSight(),
                     new PassivePerception(13)
                 },
                 languages: new List<Language>

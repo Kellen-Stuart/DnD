@@ -1,7 +1,7 @@
-namespace Common.Abstractions.Actions
-{
-    public class Claw : Monster.ActionAbstraction.Action
-    {
-        
-    }
-}
+//namespace Common.Abstractions.Actions
+//{
+//    public class Claw : Monster.ActionAbstraction.Action
+//    {
+//        
+//    }
+//}
