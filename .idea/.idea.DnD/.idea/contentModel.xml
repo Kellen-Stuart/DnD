@@ -98,7 +98,7 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="Common.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -108,56 +108,19 @@
         </e>
         <e p="Round.cs" t="Include" />
       </e>
-      <e p="ConsoleAppForThisWeekend" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="ConsoleAppForThisWeekend.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
-              <e p="ConsoleAppForThisWeekend.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Program.cs" t="Include" />
-      </e>
-      <e p="Currencies" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Currencies.cs" t="Include" />
-        <e p="Currencies.csproj" t="IncludeRecursive" />
-        <e p="Gold.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Currencies.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
       <e p="Dice" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Dice.cs" t="Include" />
         <e p="Dice.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="Dice.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
       </e>
       <e p="DnD.sln" t="IncludeFlat" />
-      <e p="DnDConsoleApp" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="DnDConsoleApp.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
-              <e p="DnDConsoleApp.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Program.cs" t="Include" />
-      </e>
       <e p="DnDWebApp" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
         <e p="App.razor" t="Include" />
@@ -218,48 +181,6 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
-        </e>
-      </e>
-      <e p="Encounters" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Encounter.cs" t="Include" />
-        <e p="Encounters.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Encounters.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="RandomEncounter.cs" t="Include" />
-      </e>
-      <e p="Items" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Item.cs" t="Include" />
-        <e p="Items.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Items.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Runes" t="Include">
-          <e p="El.cs" t="Include" />
-          <e p="Runes.cs" t="Include" />
-        </e>
-      </e>
-      <e p="Merchants" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Merchant.cs" t="Include" />
-        <e p="MerchantQuality.cs" t="Include" />
-        <e p="Merchants.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="Merchants.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
