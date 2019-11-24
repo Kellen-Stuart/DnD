@@ -42,7 +42,6 @@ namespace Common.Abstractions.Character
 
         private readonly int _initiativeRoll = Dice.Dice.Roll(20, 1);
 
-
         public Character(
             ArmorClass armorClass,
             int hitPoints,

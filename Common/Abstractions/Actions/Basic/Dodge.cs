@@ -1,4 +1,4 @@
-//namespace Common.Abstractions.Actions.BasicActions
+//namespace OldCommon.Abstractions.Actions.BasicActions
 //{
 //    public class Dodge : Monster.ActionAbstraction.Action
 //    {

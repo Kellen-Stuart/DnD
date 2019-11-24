@@ -1,4 +1,4 @@
-//namespace Common.Abstractions.Actions.Basic
+//namespace OldCommon.Abstractions.Actions.Basic
 //{
 //    public abstract class Cantrip : Spell
 //    {

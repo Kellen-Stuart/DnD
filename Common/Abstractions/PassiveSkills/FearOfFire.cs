@@ -1,6 +1,6 @@
 //using Monster.PassiveSkillsAbstraction;
 //
-//namespace Common.Abstractions.PassiveSkills
+//namespace OldCommon.Abstractions.PassiveSkills
 //{
 //    public class FearOfFire : PassiveSkill
 //    {

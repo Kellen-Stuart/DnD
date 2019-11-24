@@ -1,6 +1,6 @@
 //using Monster.SenseAbstraction;
 //
-//namespace Common.Abstractions.Senses
+//namespace OldCommon.Abstractions.Senses
 //{
 //    public class Darkvision : Sense
 //    {
