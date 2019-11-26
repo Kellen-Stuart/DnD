@@ -1,4 +1,4 @@
-namespace Common.Abstractions.Abilities
+namespace Common.Abilities
 {
     public abstract class Ability
     {

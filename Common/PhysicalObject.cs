@@ -4,7 +4,7 @@ using System.Linq;
 using System.Numerics;
 using Common.Abstractions.DamageTypes;
 
-namespace Common.Abstractions
+namespace Common
 {
     public abstract class PhysicalObject
     {

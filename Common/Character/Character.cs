@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Common.Abstractions.Actions;
-using Common.Abstractions.Actions.Basic;
 using Common.Abstractions.Armor;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
+using Common.Actions.Attacks;
 using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
 
@@ -18,9 +18,9 @@ namespace Common.Abstractions.Character
 
         public int Speed { get; set; }
 
-        public Abilities.Abilities Abilities { get; set; }
+        public Common.Abilities.Abilities Abilities { get; set; }
 
-        public Abilities.Abilities.AbilityEnum SpellCastingAbility { get; set; }
+        public Common.Abilities.Abilities.AbilityEnum SpellCastingAbility { get; set; }
 
         public SavingThrows.SavingThrows SavingThrows { get; set; }
 
@@ -46,8 +46,8 @@ namespace Common.Abstractions.Character
             ArmorClass armorClass,
             int hitPoints,
             int speed,
-            Abilities.Abilities abilities,
-            Abilities.Abilities.AbilityEnum spellCastingAbility,
+            Common.Abilities.Abilities abilities,
+            Common.Abilities.Abilities.AbilityEnum spellCastingAbility,
             SavingThrows.SavingThrows savingThrows,
             IEnumerable<DamageType> damageResistances,
             IEnumerable<DamageType> damageImmunities,

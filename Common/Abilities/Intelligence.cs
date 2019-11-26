@@ -1,4 +1,4 @@
-namespace Common.Abstractions.Abilities
+namespace Common.Abilities
 {
     public class Intelligence : Ability
     {

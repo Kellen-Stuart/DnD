@@ -1,5 +1,4 @@
-
-namespace Common.Abstractions.Abilities
+namespace Common.Abilities
 {
     public class Constitution : Ability
     {

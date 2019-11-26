@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Common.Abstractions.Abilities;
+using Common.Abilities;
 using Common.Abstractions.Actions;
-using Common.Abstractions.Actions.Basic;
 using Common.Abstractions.Armor;
 using Common.Abstractions.Challenge;
 using Common.Abstractions.Character;
@@ -11,8 +10,9 @@ using Common.Abstractions.Languages;
 using Common.Abstractions.PassiveSkills;
 using Common.Abstractions.SavingThrows;
 using Common.Abstractions.Senses;
+using Common.Actions.Attacks;
 
-namespace Common.Monsters.Glabrezu
+namespace Common.Monsters
 {
     public class Glabrezu : Character
     {
@@ -24,7 +24,7 @@ namespace Common.Monsters.Glabrezu
                                rolls: 15
                            ) + 75,
                 speed: 40,
-                abilities: new Abilities(
+                abilities: new Abilities.Abilities(
                     strength: new Strength(20, 5),
                     dexterity: new Dexterity(15, 2),
                     constitution: new Constitution(21, 5),
@@ -32,7 +32,7 @@ namespace Common.Monsters.Glabrezu
                     wisdom: new Wisdom(17, 3),
                     charisma: new Charisma(16, 3)
                 ),
-                spellCastingAbility: Abilities.AbilityEnum.Intelligence,
+                spellCastingAbility: Common.Abilities.Abilities.AbilityEnum.Intelligence,
                 savingThrows: new SavingThrows(
                     strengthModifier: 9,
                     constitutionModifier: 9,

@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using Common.Abstractions;
+using Common.Abstractions.Actions;
 using Common.Abstractions.DamageTypes;
 
-namespace Common.Abstractions.Actions.Basic
+namespace Common.Actions.Attacks
 {
     public class UnarmedStrike : MeleeAttack
     {
@@ -31,15 +33,15 @@ namespace Common.Abstractions.Actions.Basic
         {
             throw new Exception("Program does not yet support points");
             // Does a physical object exist at that point? 
-            var physicalObject = Map.MapObject.GetPhysicalObject(point);
-            if (physicalObject != null)
-            {
-                physicalObject.TakeDamage(_strengthModifier + 1, DamageType, 1);
-            }
-            else
-            {
-                Console.WriteLine($"There is no physical object {point.ToString()}");
-            }
+//            var physicalObject = Map.MapObject.GetPhysicalObject(point);
+//            if (physicalObject != null)
+//            {
+//                physicalObject.TakeDamage(_strengthModifier + 1, DamageType, 1);
+//            }
+//            else
+//            {
+//                Console.WriteLine($"There is no physical object {point.ToString()}");
+//            }
         }
 
         public override void Execute(IEnumerable<Vector3> points)
