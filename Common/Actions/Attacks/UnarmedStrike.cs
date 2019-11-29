@@ -1,33 +1,26 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Net.Mail;
 using System.Numerics;
-using Common.Abstractions;
-using Common.Abstractions.Actions;
 using Common.Abstractions.DamageTypes;
+using Common.Actions.Abstractions;
 
 namespace Common.Actions.Attacks
 {
     public class UnarmedStrike : MeleeAttack
     {
         private readonly int _strengthModifier;
+        private readonly int _reach;
 
-        public UnarmedStrike(int strengthModifier)
+        public UnarmedStrike(int strengthModifier, int reach) :
+            base(
+                damageType: DamageType.Bludgeoning,
+                range: reach
+            )
         {
             _strengthModifier = strengthModifier;
-            Range = 5;
-            DamageType = DamageType.Bludgeoning;
         }
-
-        public override void Execute(PhysicalObject physicalObject)
-        {
-            physicalObject.TakeDamage(_strengthModifier + 1, DamageType, 1);
-        }
-
-        public override void Execute(IEnumerable<PhysicalObject> physicalObjects)
-        {
-            throw new Exception("Unable to perform Unarmed Strike on multiple targets");
-        }
-
 
         public override void Execute(Vector3 point)
         {
@@ -46,7 +39,7 @@ namespace Common.Actions.Attacks
 
         public override void Execute(IEnumerable<Vector3> points)
         {
-            throw new Exception("Impossible to perform Unarmed Strike on multiple points.");
+            throw new Exception("Unarmed strike cannot be targeted at multiple points");
         }
     }
 }

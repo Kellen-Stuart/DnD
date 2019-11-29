@@ -1,5 +1,7 @@
 ﻿
-namespace Common.Abstractions.Armor
+using Common.Abstractions.Armor;
+
+namespace Common.Armor
 {
     public class ArmorClass
     {

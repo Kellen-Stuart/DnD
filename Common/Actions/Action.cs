@@ -1,15 +1,11 @@
 using System.Collections.Generic;
-using System.Drawing;
 using System.Numerics;
 
-namespace Common.Abstractions.Actions
+namespace Common.Actions
 {
     public interface IAction
     {
-        void Execute();
         void Execute(Vector3 point);
         void Execute(IEnumerable<Vector3> points);
-        void Execute(PhysicalObject physicalObject);
-        void Execute(IEnumerable<PhysicalObject> physicalObjects);
     }
 }

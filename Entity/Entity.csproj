@@ -2,12 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
-        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Dice\Dice.csproj" />
-      <ProjectReference Include="..\Map\Map.csproj" />
+      <PackageReference Include="EntityFramework" Version="6.3.0" />
     </ItemGroup>
 
 </Project>

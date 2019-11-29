@@ -16,6 +16,10 @@
           <e p="Wisdom.cs" t="Include" />
         </e>
         <e p="Actions" t="Include">
+          <e p="Abstractions" t="Include">
+            <e p="MeleeAttack.cs" t="Include" />
+            <e p="Spell.cs" t="Include" />
+          </e>
           <e p="Action.cs" t="Include" />
           <e p="Attack.cs" t="Include" />
           <e p="Attacks" t="Include">
@@ -31,10 +35,8 @@
           <e p="ChillingGaze.cs" t="Include" />
           <e p="Claw.cs" t="Include" />
           <e p="Fist.cs" t="Include" />
-          <e p="MeleeAttack.cs" t="Include" />
           <e p="MultiAttack.cs" t="Include" />
           <e p="Reaction.cs" t="Include" />
-          <e p="Spell.cs" t="Include" />
           <e p="Spells" t="Include">
             <e p="Spell.cs" t="Include" />
             <e p="SpellType.cs" t="Include" />
@@ -63,7 +65,6 @@
         <e p="Languages" t="Include">
           <e p="Language.cs" t="Include" />
         </e>
-        <e p="MapObject.cs" t="Include" />
         <e p="Monsters" t="Include">
           <e p="Glabrezu.cs" t="Include" />
           <e p="Yeti.cs" t="Include" />
@@ -84,9 +85,6 @@
           <e p="SnowCamoflage.cs" t="Include" />
         </e>
         <e p="PhysicalObject.cs" t="Include" />
-        <e p="PlayerCharacter" t="Include">
-          <e p="Zazu.cs" t="Include" />
-        </e>
         <e p="ProficiencyBonus.cs" t="Include" />
         <e p="Round.cs" t="Include" />
         <e p="SavingThrows" t="Include">
@@ -175,6 +173,31 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+        </e>
+      </e>
+      <e p="Entity" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="dbdiagram.io" t="Include" />
+        <e p="DnDContext.cs" t="Include" />
+        <e p="Entity.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Entity.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Map" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Map.cs" t="Include" />
+        <e p="Map.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Map.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />

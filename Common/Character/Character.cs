@@ -1,16 +1,14 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using Common.Abstractions.Actions;
-using Common.Abstractions.Armor;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
+using Common.Actions;
 using Common.Actions.Attacks;
+using Common.Armor;
 using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
 
-namespace Common.Abstractions.Character
+namespace Common.Character
 {
     public abstract class Character : PhysicalObject
     {
@@ -22,13 +20,13 @@ namespace Common.Abstractions.Character
 
         public Common.Abilities.Abilities.AbilityEnum SpellCastingAbility { get; set; }
 
-        public SavingThrows.SavingThrows SavingThrows { get; set; }
+        public Abstractions.SavingThrows.SavingThrows SavingThrows { get; set; }
 
         public IEnumerable<Sense> Senses { get; set; }
 
         public IEnumerable<Language> Languages { get; set; }
 
-        public Challenge.Challenge Challenge { get; set; }
+        public Abstractions.Challenge.Challenge Challenge { get; set; }
 
         public IEnumerable<PassiveSkill> PassiveSkills { get; set; }
 
@@ -48,13 +46,13 @@ namespace Common.Abstractions.Character
             int speed,
             Common.Abilities.Abilities abilities,
             Common.Abilities.Abilities.AbilityEnum spellCastingAbility,
-            SavingThrows.SavingThrows savingThrows,
+            Abstractions.SavingThrows.SavingThrows savingThrows,
             IEnumerable<DamageType> damageResistances,
             IEnumerable<DamageType> damageImmunities,
             IEnumerable<Condition> conditionImmunities,
             IEnumerable<Sense> senses,
             IEnumerable<Language> languages,
-            Challenge.Challenge challenge,
+            Abstractions.Challenge.Challenge challenge,
             IEnumerable<IAction> actions,
             IEnumerable<PassiveSkill> passiveSkills,
             System.Drawing.Size size,
@@ -78,7 +76,7 @@ namespace Common.Abstractions.Character
             // Basic Actions - common to every character
             BasicActions = new List<IAction>
             {
-                new UnarmedStrike(Abilities.Strength.Modifier)
+                new UnarmedStrike(Abilities.Strength.Modifier, 5) // you'd want to lookup the reach
             };
         }
     }

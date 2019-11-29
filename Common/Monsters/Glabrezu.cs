@@ -1,20 +1,20 @@
 using System.Collections.Generic;
 using Common.Abilities;
-using Common.Abstractions.Actions;
 using Common.Abstractions.Armor;
 using Common.Abstractions.Challenge;
-using Common.Abstractions.Character;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
 using Common.Abstractions.PassiveSkills;
 using Common.Abstractions.SavingThrows;
 using Common.Abstractions.Senses;
+using Common.Actions;
 using Common.Actions.Attacks;
+using Common.Armor;
 
 namespace Common.Monsters
 {
-    public class Glabrezu : Character
+    public class Glabrezu : Character.Character
     {
         public Glabrezu() :
             base(
@@ -73,7 +73,7 @@ namespace Common.Monsters
                 },
                 actions: new List<IAction>
                 {
-                    new UnarmedStrike(5)
+                    new UnarmedStrike(5, 5)
                 },
                 size: new System.Drawing.Size(10, 10),
                 reach: 10
