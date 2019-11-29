@@ -1,18 +1,18 @@
 using System.Collections.Generic;
+using System.Drawing;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
 using Common.Actions;
-using Common.Actions.Attacks;
 using Common.Armor;
 using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
 
-namespace Common.Character
+namespace Common
 {
     public abstract class Character : PhysicalObject
     {
-        public ArmorClass ArmorClass { get; set; }
+        public int Level { get; private set; }
 
         public int Speed { get; set; }
 
@@ -40,8 +40,11 @@ namespace Common.Character
 
         private  int _initiativeRoll => Dice.Dice.Roll(20, 1);
 
+        public int RollToHit => Dice.Dice.Roll(20, 1) +
+                                ProficiencyBonus.LookupProficiencyBonusByLevel(Level);
+
         public Character(
-            ArmorClass armorClass,
+            int armorClass,
             int hitPoints,
             int speed,
             Common.Abilities.Abilities abilities,
@@ -72,12 +75,6 @@ namespace Common.Character
             PassiveSkills = passiveSkills;
             Size = size;
             Reach = reach;
-            
-            // Basic Actions - common to every character
-            BasicActions = new List<IAction>
-            {
-                new UnarmedStrike(Abilities.Strength.Modifier, 5) // you'd want to lookup the reach
-            };
         }
     }
 }

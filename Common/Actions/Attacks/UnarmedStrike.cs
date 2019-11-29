@@ -9,22 +9,48 @@ namespace Common.Actions.Attacks
 {
     public class UnarmedStrike : MeleeAttack
     {
-        private readonly int _strengthModifier;
-        private readonly int _reach;
+        private readonly Character _attacker;
 
-        public UnarmedStrike(int strengthModifier, int reach) :
+        // The arguments are all dependent on the character
+        public UnarmedStrike(Character attacker) :
             base(
                 damageType: DamageType.Bludgeoning,
-                range: reach
+                range: attacker.Reach
             )
         {
-            _strengthModifier = strengthModifier;
+            _attacker = attacker;
         }
 
         public override void Execute(Point point)
         {
-            var target = Global.Map.GetPhysicalObject(point);
-            target.TakeDamage(_strengthModifier + 1, DamageType, 1);
+            // Get the target
+            var target = Global.Map.GetPhysicalObject(point); // assuming there is in fact a target and not null
+
+            // Is the attack within range? 
+            if (Range >= _attacker.PointOnMap.CalculateDistance(point))
+            {
+                // Does the attack hit? 
+                if (_attacker.RollToHit >= target.ArmorClass)
+                {
+                    target.TakeDamage(
+                        damage: CalculateDamage(),
+                        damageType: DamageType,
+                        numberOfHits: 1);
+                }
+                else
+                {
+                    Console.WriteLine($"Attacker has missed ${nameof(UnarmedStrike)}!");
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Attacker is not in range of the target.");
+            }
+        }
+
+        private int CalculateDamage()
+        {
+            return _attacker.Abilities.Strength.Modifier + 1;
         }
 
         public override void Execute(IEnumerable<Point> points)

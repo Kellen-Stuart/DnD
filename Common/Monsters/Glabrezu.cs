@@ -14,11 +14,11 @@ using Common.Armor;
 
 namespace Common.Monsters
 {
-    public class Glabrezu : Character.Character
+    public class Glabrezu : Character
     {
         public Glabrezu() :
             base(
-                armorClass: new ArmorClass(17),
+                armorClass: 17,
                 hitPoints: Dice.Dice.Roll(
                                numberOfSides: 10,
                                rolls: 15
@@ -71,14 +71,15 @@ namespace Common.Monsters
                     new InnateSpellcasting(),
                     new MagicResistance()
                 },
-                actions: new List<IAction>
-                {
-                    new UnarmedStrike(5, 5)
-                },
+                actions: null,
                 size: new System.Drawing.Size(10, 10),
                 reach: 10
             )
         {
+            Actions = new List<IAction>
+            {
+                new UnarmedStrike(this)
+            };
         }
     }
 }

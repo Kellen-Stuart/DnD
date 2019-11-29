@@ -20,7 +20,6 @@
             <e p="MeleeAttack.cs" t="Include" />
             <e p="Spell.cs" t="Include" />
           </e>
-          <e p="Action.cs" t="Include" />
           <e p="Attack.cs" t="Include" />
           <e p="Attacks" t="Include">
             <e p="Pincer.cs" t="Include" />
@@ -35,6 +34,7 @@
           <e p="ChillingGaze.cs" t="Include" />
           <e p="Claw.cs" t="Include" />
           <e p="Fist.cs" t="Include" />
+          <e p="IAction.cs" t="Include" />
           <e p="MultiAttack.cs" t="Include" />
           <e p="Reaction.cs" t="Include" />
           <e p="Spells" t="Include">
@@ -52,9 +52,7 @@
         <e p="Challenge" t="Include">
           <e p="Challenge.cs" t="Include" />
         </e>
-        <e p="Character" t="Include">
-          <e p="Character.cs" t="Include" />
-        </e>
+        <e p="Character.cs" t="Include" />
         <e p="Common.csproj" t="IncludeRecursive" />
         <e p="Conditions" t="Include">
           <e p="Condition.cs" t="Include" />
@@ -88,6 +86,7 @@
           <e p="SnowCamoflage.cs" t="Include" />
         </e>
         <e p="PhysicalObject.cs" t="Include" />
+        <e p="PointExtensions.cs" t="Include" />
         <e p="ProficiencyBonus.cs" t="Include" />
         <e p="Round.cs" t="Include" />
         <e p="SavingThrows" t="Include">

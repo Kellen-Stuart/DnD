@@ -46,7 +46,10 @@ namespace Common.Map
 
         public PhysicalObject GetPhysicalObject(Point point)
         {
-            return _map[point.X, point.Y];
+            if (PhysicalObjectExists(point))
+                return _map[point.X, point.Y];
+            
+            throw new Exception($"Unable to find physical object at point: {point.ToString()}.");
         }
 
         public bool PhysicalObjectExists(Point point)

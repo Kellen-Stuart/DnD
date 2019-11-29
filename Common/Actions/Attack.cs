@@ -12,7 +12,6 @@ namespace Common.Actions
     {
         protected Attack(DamageType damageType, int range)
         {
-            DamageType = damageType;
             Range = range;
         }
         

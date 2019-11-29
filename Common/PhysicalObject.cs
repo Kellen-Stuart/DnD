@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
+using Common.Armor;
 
 namespace Common
 {
@@ -10,9 +11,10 @@ namespace Common
     {
         public Point PointOnMap { get; set; }
         public int HitPoints { get; set; }
+        public int ArmorClass { get; set; }
         public IEnumerable<DamageType> DamageResistances { get; set; }
         public IEnumerable<DamageType> DamageImmunities { get; set; }
-        
+
         public System.Drawing.Size Size { get; set; }
 
 
