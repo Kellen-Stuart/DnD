@@ -38,7 +38,7 @@ namespace Common.Character
 
         public int Initiative => Abilities.Dexterity.Modifier + _initiativeRoll;
 
-        private readonly int _initiativeRoll = Dice.Dice.Roll(20, 1);
+        private  int _initiativeRoll => Dice.Dice.Roll(20, 1);
 
         public Character(
             ArmorClass armorClass,

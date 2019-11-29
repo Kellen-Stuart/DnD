@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Numerics;
+using System.Drawing;
 using Common.Abstractions.DamageTypes;
 
 namespace Common.Actions.Abstractions
@@ -10,8 +10,8 @@ namespace Common.Actions.Abstractions
         {
         }
         
-        public abstract override void Execute(Vector3 point);
+        public abstract override void Execute(Point point);
 
-        public abstract override void Execute(IEnumerable<Vector3> points);
+        public abstract override void Execute(IEnumerable<Point> points);
     }
 }

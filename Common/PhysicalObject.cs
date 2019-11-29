@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
+using System.Drawing;
 using Common.Abstractions.DamageTypes;
 
 namespace Common
 {
     public abstract class PhysicalObject
     {
-        public Vector3 PointOnMap { get; set; }
+        public Point PointOnMap { get; set; }
         public int HitPoints { get; set; }
         public IEnumerable<DamageType> DamageResistances { get; set; }
         public IEnumerable<DamageType> DamageImmunities { get; set; }
@@ -19,11 +19,11 @@ namespace Common
         public void TakeDamage(int damage, DamageType damageType, int numberOfHits = 1)
         {
             // Immunity
-            if (this.ImmuneTo(damageType))
+            if (ImmuneTo(damageType))
                 return;
 
             // Resistance
-            if (this.ResistantTo(damageType))
+            if (ResistantTo(damageType))
             {
                 HitPoints -= (damage / 2);
                 return;

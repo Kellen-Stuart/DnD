@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Numerics;
+using System.Drawing;
 using Common.Abstractions.DamageTypes;
 
 namespace Common.Abstractions.Actions.Attacks
@@ -12,12 +12,12 @@ namespace Common.Abstractions.Actions.Attacks
 //            DamageType = DamageType.Bludgeoning;
 //        }
 //
-//        public override void Execute(Vector3 point)
+//        public override void Execute(Point point)
 //        {
 //            throw new System.NotImplementedException();
 //        }
 //
-//        public override void Execute(IEnumerable<Vector3> points)
+//        public override void Execute(IEnumerable<Point> points)
 //        {
 //            throw new System.NotImplementedException();
 //        }

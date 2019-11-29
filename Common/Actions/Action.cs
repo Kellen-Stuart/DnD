@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using System.Numerics;
+using System.Drawing;
 
 namespace Common.Actions
 {
     public interface IAction
     {
-        void Execute(Vector3 point);
-        void Execute(IEnumerable<Vector3> points);
+        void Execute(Point point);
+        void Execute(IEnumerable<Point> points);
     }
 }

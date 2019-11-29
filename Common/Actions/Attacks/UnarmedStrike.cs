@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Net.Mail;
-using System.Numerics;
+using System.Drawing;
 using Common.Abstractions.DamageTypes;
 using Common.Actions.Abstractions;
+using static Common.Map.Map;
 
 namespace Common.Actions.Attacks
 {
@@ -22,22 +21,13 @@ namespace Common.Actions.Attacks
             _strengthModifier = strengthModifier;
         }
 
-        public override void Execute(Vector3 point)
+        public override void Execute(Point point)
         {
-            throw new Exception("Program does not yet support points");
-            // Does a physical object exist at that point? 
-//            var physicalObject = Map.MapObject.GetPhysicalObject(point);
-//            if (physicalObject != null)
-//            {
-//                physicalObject.TakeDamage(_strengthModifier + 1, DamageType, 1);
-//            }
-//            else
-//            {
-//                Console.WriteLine($"There is no physical object {point.ToString()}");
-//            }
+            var target = Global.Map.GetPhysicalObject(point);
+            target.TakeDamage(_strengthModifier + 1, DamageType, 1);
         }
 
-        public override void Execute(IEnumerable<Vector3> points)
+        public override void Execute(IEnumerable<Point> points)
         {
             throw new Exception("Unarmed strike cannot be targeted at multiple points");
         }

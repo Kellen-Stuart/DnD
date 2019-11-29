@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Numerics;
+using System.Drawing;
 using Common.Abstractions.DamageTypes;
 
 namespace Common.Actions
@@ -23,8 +23,8 @@ namespace Common.Actions
         protected readonly int Range;
 
         // You either attack a single point or multiple points
-        public abstract void Execute(Vector3 point);
+        public abstract void Execute(Point point);
 
-        public abstract void Execute(IEnumerable<Vector3> points);
+        public abstract void Execute(IEnumerable<Point> points);
     }
 }
