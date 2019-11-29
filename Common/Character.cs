@@ -12,7 +12,7 @@ namespace Common
 {
     public abstract class Character : PhysicalObject
     {
-        public int Level { get; private set; }
+        public int Level { get; set; }
 
         public int Speed { get; set; }
 

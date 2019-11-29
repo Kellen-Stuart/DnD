@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Common.Abilities;
-using Common.Abstractions.Armor;
 using Common.Abstractions.Challenge;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
@@ -10,7 +9,6 @@ using Common.Abstractions.SavingThrows;
 using Common.Abstractions.Senses;
 using Common.Actions;
 using Common.Actions.Attacks;
-using Common.Armor;
 
 namespace Common.Monsters
 {
@@ -80,6 +78,8 @@ namespace Common.Monsters
             {
                 new UnarmedStrike(this)
             };
+
+            Level = 10;
         }
     }
 }
