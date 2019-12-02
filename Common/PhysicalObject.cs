@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
-using Common.Armor;
+using Common.Abstractions.Size;
 
 namespace Common
 {
@@ -11,25 +11,21 @@ namespace Common
     {
         // The order of instance variables should follow DnD Beyond
         
-        public Size Size { get; private set; }
+        public SizeEnum Size { get; private set; }
         
         public int ArmorClass { get; private set; }
-        
-        public int HitPoints { get; private set; }
-        
+
         public IEnumerable<DamageType> DamageResistances { get; private set; }
         
         public IEnumerable<DamageType> DamageImmunities { get; private set; }
-        
         
         // Not part of DnD Beyond stat sheet
         public Point PointOnMap { get; protected set; }
 
 
         public PhysicalObject(
-            Size size,
+            SizeEnum size,
             int armorClass,
-            int hitPoints,
             IEnumerable<DamageType> damageImmunities,
             IEnumerable<DamageType> damageResistances,
             Point pointOnMap
@@ -37,7 +33,6 @@ namespace Common
         {
             Size = size;
             ArmorClass = armorClass;
-            HitPoints = hitPoints;
             DamageImmunities = damageImmunities;
             DamageResistances = damageResistances;
             PointOnMap = pointOnMap;
@@ -53,13 +48,13 @@ namespace Common
             // Resistance
             if (ResistantTo(damageType))
             {
-                HitPoints -= (damage / 2);
+                HitPointCalculation -= (damage / 2);
                 return;
             }
 
             // Condition?
 
-            HitPoints -= damage;
+            HitPointCalculation -= damage;
         }
 
         public bool ImmuneTo(DamageType damageType)

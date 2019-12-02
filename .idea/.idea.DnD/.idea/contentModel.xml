@@ -49,6 +49,7 @@
           <e p="ArmorType.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Calculator.cs" t="Include" />
         <e p="Challenge" t="Include">
           <e p="Challenge.cs" t="Include" />
         </e>
@@ -60,6 +61,8 @@
         <e p="DamageTypes" t="Include">
           <e p="DamageType.cs" t="Include" />
         </e>
+        <e p="Dice.cs" t="Include" />
+        <e p="HitPointDice.cs" t="Include" />
         <e p="Languages" t="Include">
           <e p="Language.cs" t="Include" />
         </e>
