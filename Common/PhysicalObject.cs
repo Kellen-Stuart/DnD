@@ -9,13 +9,39 @@ namespace Common
 {
     public abstract class PhysicalObject
     {
-        public Point PointOnMap { get; set; }
-        public int HitPoints { get; set; }
-        public int ArmorClass { get; set; }
-        public IEnumerable<DamageType> DamageResistances { get; set; }
-        public IEnumerable<DamageType> DamageImmunities { get; set; }
+        // The order of instance variables should follow DnD Beyond
+        
+        public Size Size { get; private set; }
+        
+        public int ArmorClass { get; private set; }
+        
+        public int HitPoints { get; private set; }
+        
+        public IEnumerable<DamageType> DamageResistances { get; private set; }
+        
+        public IEnumerable<DamageType> DamageImmunities { get; private set; }
+        
+        
+        // Not part of DnD Beyond stat sheet
+        public Point PointOnMap { get; protected set; }
 
-        public System.Drawing.Size Size { get; set; }
+
+        public PhysicalObject(
+            Size size,
+            int armorClass,
+            int hitPoints,
+            IEnumerable<DamageType> damageImmunities,
+            IEnumerable<DamageType> damageResistances,
+            Point pointOnMap
+        )
+        {
+            Size = size;
+            ArmorClass = armorClass;
+            HitPoints = hitPoints;
+            DamageImmunities = damageImmunities;
+            DamageResistances = damageResistances;
+            PointOnMap = pointOnMap;
+        }
 
 
         public void TakeDamage(int damage, DamageType damageType, int numberOfHits = 1)

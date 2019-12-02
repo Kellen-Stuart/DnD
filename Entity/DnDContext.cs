@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
+using Common;
 
 namespace Entity
 {
@@ -9,7 +10,7 @@ namespace Entity
         {
             
         }
-
-        public DbSet<Action> Actions { get; set; }
+        
+        public DbSet<Character> Characters { get; set; }
     }
 }
