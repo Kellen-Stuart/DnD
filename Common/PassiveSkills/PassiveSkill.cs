@@ -1,4 +1,4 @@
-namespace Common.Abstractions.PassiveSkills
+namespace Common.PassiveSkills
 {
     public abstract class PassiveSkill
     {

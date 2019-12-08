@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Common.Actions
+namespace Common.Actions.Abstractions
 {
     public interface IAction
     {
         void Execute(Point point);
-        void Execute(IEnumerable<Point> points);
+        void Execute(ICollection<Point> points);
     }
 }

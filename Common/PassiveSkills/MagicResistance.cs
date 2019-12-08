@@ -1,6 +1,6 @@
-namespace Common.Abstractions.PassiveSkills
+namespace Common.PassiveSkills
 {
-    public class MagicResistance : Common.Abstractions.PassiveSkills.PassiveSkill
+    public class MagicResistance : PassiveSkill
     {
         
     }

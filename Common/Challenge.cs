@@ -2,10 +2,10 @@ namespace Common.Abstractions.Challenge
 {
     public class Challenge
     {
-        public int ChallengeLevel { get; private set; }
+        public decimal ChallengeLevel { get; private set; }
         public int Experience { get; private set; }
 
-        public Challenge(int challengeLevel, int experience)
+        public Challenge(decimal challengeLevel, int experience)
         {
             ChallengeLevel = challengeLevel;
             Experience = experience;

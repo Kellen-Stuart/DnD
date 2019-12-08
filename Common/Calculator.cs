@@ -4,7 +4,7 @@ namespace Common
     {
         public static int HitPoints(int rolls, int numberOfSides, int modifier)
         {
-            return Dice.Dice.Roll(
+            return Dice.Roll(
                        rolls: rolls,
                        numberOfSides: numberOfSides
                    ) + modifier;

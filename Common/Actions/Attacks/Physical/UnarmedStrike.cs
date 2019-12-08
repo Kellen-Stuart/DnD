@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
 using Common.Actions.Abstractions;
-using static Common.Map.Map;
+using Common.Weapons;
 
-namespace Common.Actions.Attacks
+namespace Common.Actions.Attacks.Physical
 {
-    public class UnarmedStrike : MeleeAttack
+    public class UnarmedStrike : MeleeWeaponAttack
     {
         private readonly Character _attacker;
 
         // The arguments are all dependent on the character
         public UnarmedStrike(Character attacker) :
             base(
+                weapon: new Fist(),
                 damageType: DamageType.Bludgeoning,
                 range: attacker.Reach
             )
@@ -21,6 +22,7 @@ namespace Common.Actions.Attacks
             _attacker = attacker;
         }
 
+        // TODO: this method is violating SRP
         public override void Execute(Point point)
         {
             // Get the target
@@ -47,15 +49,16 @@ namespace Common.Actions.Attacks
                 Console.WriteLine($"Attacker is not in range of the target.");
             }
         }
-
-        private int CalculateDamage()
-        {
-            return _attacker.Abilities.Strength.Modifier + 1;
-        }
-
-        public override void Execute(IEnumerable<Point> points)
+        
+        public override void Execute(ICollection<Point> points)
         {
             throw new Exception("Unarmed strike cannot be targeted at multiple points");
+        }
+
+        // d20 + proficiency bonus + Str modifier
+        private int CalculateDamage()
+        {
+            return _attacker.Abilities.Strength.Modifier + Weapon.BaseDamage;
         }
     }
 }

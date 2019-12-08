@@ -5,32 +5,30 @@ using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
 using Common.Abstractions.Size;
-using Common.Actions;
-using PassiveSkill = Common.Abstractions.PassiveSkills.PassiveSkill;
+using Common.Actions.Abstractions;
+using Common.Actions.Attacks.Physical;
+using PassiveSkill = Common.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
 
 namespace Common
 {
-    public abstract class Character : PhysicalObject
+    public class Character : PhysicalObject
     {
         public int Speed { get; set; }
-        public int Level { get; private set; }
-
-        public int HitPoints { get; }
+        public int Level { get; private set; } // Does physical object have a level?
         public Common.Abilities.Abilities Abilities { get; set; }
         public Common.Abilities.Abilities.AbilityEnum SpellCastingAbility { get; set; }
         public Abstractions.SavingThrows.SavingThrows SavingThrows { get; set; }
-        public IEnumerable<Sense> Senses { get; private set; }
-        public IEnumerable<Language> Languages { get; set; }
+        public ICollection<Sense> Senses { get; private set; }
+        public ICollection<Language> Languages { get; set; }
         public Abstractions.Challenge.Challenge Challenge { get; set; }
-        public IEnumerable<PassiveSkill> PassiveSkills { get; set; }
-        public IEnumerable<IAction> Actions { get; set; }
-        public IEnumerable<IAction> BasicActions { get; set; }
+        public ICollection<PassiveSkill> PassiveSkills { get; set; }
+        public ICollection<IAction> Actions { get; set; }
         public int Reach { get; set; }
         public int Initiative => Abilities.Dexterity.Modifier + _initiativeRoll;
-        private int _initiativeRoll => Dice.Dice.Roll(20, 1);
+        private int _initiativeRoll => Dice.Roll(20, 1);
 
-        public int RollToHit => Dice.Dice.Roll(20, 1) +
+        public int RollToHit => Dice.Roll(20, 1) +
                                 ProficiencyBonus.LookupProficiencyBonusByLevel(Level);
 
         public Action<int, int, int> HitPointCalculation { get; }
@@ -39,23 +37,24 @@ namespace Common
         public Character(
             SizeEnum size,
             int armorClass,
-            Action<int, int, int> hitPointCalculation,
-            IEnumerable<DamageType> damageResistances,
-            IEnumerable<DamageType> damageImmunities,
+            int hitPoints,
+            ICollection<DamageType> damageResistances,
+            ICollection<DamageType> damageImmunities,
             Point pointOnMap,
             int speed,
             Common.Abilities.Abilities abilities,
-            IEnumerable<Condition> conditionImmunities,
-            IEnumerable<Sense> senses,
-            IEnumerable<Language> languages,
+            ICollection<Condition> conditionImmunities,
+            ICollection<Sense> senses,
+            ICollection<Language> languages,
             Abstractions.Challenge.Challenge challenge,
-            IEnumerable<PassiveSkill> passiveSkills,
-            IEnumerable<IAction> actions,
+            ICollection<PassiveSkill> passiveSkills,
+            ICollection<IAction> actions,
             Common.Abilities.Abilities.AbilityEnum spellCastingAbility,
             Abstractions.SavingThrows.SavingThrows savingThrows,
             int reach
         ) : base(
             size: size,
+            hitPoints: hitPoints,
             armorClass: armorClass,
             damageImmunities: damageImmunities,
             damageResistances: damageResistances,
@@ -63,17 +62,20 @@ namespace Common
         {
             Speed = speed;
             Abilities = abilities;
-            HitPointCalculation = hitPointCalculation;
             SpellCastingAbility = spellCastingAbility;
             SavingThrows = savingThrows;
             Languages = languages;
             Challenge = challenge;
-            Actions = actions;
             PassiveSkills = passiveSkills;
             Reach = reach;
 
+            // Add all the "base" actions that every character has access to
+            Actions = new List<IAction> {new UnarmedStrike(this)};
 
-            HitPoints = Ca
+            foreach (var action in actions)
+            {
+                Actions.Add(action);
+            }
         }
     }
 }

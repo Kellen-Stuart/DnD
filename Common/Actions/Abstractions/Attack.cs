@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
 
-namespace Common.Actions
+namespace Common.Actions.Abstractions
 {
     // An attack is something that does damage
     // There's two types of attacks
@@ -24,6 +24,6 @@ namespace Common.Actions
         // You either attack a single point or multiple points
         public abstract void Execute(Point point);
 
-        public abstract void Execute(IEnumerable<Point> points);
+        public abstract void Execute(ICollection<Point> points);
     }
 }

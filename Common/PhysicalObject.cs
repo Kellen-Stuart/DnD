@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Size;
@@ -9,29 +8,33 @@ namespace Common
 {
     public abstract class PhysicalObject
     {
-        // The order of instance variables should follow DnD Beyond
-        
+        // The order of instance variables should follow DnD Beyond Monster Manual
         public SizeEnum Size { get; private set; }
+        
+        public int HitPoints { get; protected set; }
         
         public int ArmorClass { get; private set; }
 
-        public IEnumerable<DamageType> DamageResistances { get; private set; }
+        public ICollection<DamageType> DamageResistances { get; private set; }
         
-        public IEnumerable<DamageType> DamageImmunities { get; private set; }
+        public ICollection<DamageType> DamageImmunities { get; private set; }
         
         // Not part of DnD Beyond stat sheet
         public Point PointOnMap { get; protected set; }
+        
 
 
         public PhysicalObject(
             SizeEnum size,
+            int hitPoints,
             int armorClass,
-            IEnumerable<DamageType> damageImmunities,
-            IEnumerable<DamageType> damageResistances,
+            ICollection<DamageType> damageImmunities,
+            ICollection<DamageType> damageResistances,
             Point pointOnMap
         )
         {
             Size = size;
+            HitPoints = hitPoints;
             ArmorClass = armorClass;
             DamageImmunities = damageImmunities;
             DamageResistances = damageResistances;
@@ -48,13 +51,13 @@ namespace Common
             // Resistance
             if (ResistantTo(damageType))
             {
-                HitPointCalculation -= (damage / 2);
+                HitPoints -= damage / 2;
                 return;
             }
 
             // Condition?
 
-            HitPointCalculation -= damage;
+            HitPoints -= damage;
         }
 
         public bool ImmuneTo(DamageType damageType)

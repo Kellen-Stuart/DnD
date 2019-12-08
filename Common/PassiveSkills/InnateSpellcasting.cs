@@ -1,6 +1,8 @@
+using Common.PassiveSkills;
+
 namespace Common.Abstractions.PassiveSkills
 {
-    public class InnateSpellcasting : Common.Abstractions.PassiveSkills.PassiveSkill
+    public class InnateSpellcasting : PassiveSkill
     {
         
     }
