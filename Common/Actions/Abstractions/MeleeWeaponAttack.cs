@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
-using Common.Weapons.Abstractions;
+using Common.Weapons;
 
 namespace Common.Actions.Abstractions
 {
@@ -9,7 +9,7 @@ namespace Common.Actions.Abstractions
     {
         public Weapon Weapon { get; private set; }
         
-        protected MeleeWeaponAttack(DamageType damageType, int range, Weapons.Abstractions.Weapon weapon) : base(damageType, range)
+        protected MeleeWeaponAttack(DamageType damageType, int range, Weapon weapon) : base(damageType, range)
         {
             Weapon = weapon;
         }

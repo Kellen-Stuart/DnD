@@ -4,18 +4,18 @@ using System.Drawing;
 using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
-using Common.Abstractions.Size;
 using Common.Actions.Abstractions;
 using Common.Actions.Attacks.Physical;
 using PassiveSkill = Common.PassiveSkills.PassiveSkill;
 using Sense = Common.Abstractions.Senses.Sense;
+using Size = Common.Abstractions.Size.Size;
 
 namespace Common
 {
     public class Character : PhysicalObject
     {
         public int Speed { get; set; }
-        public int Level { get; private set; } // Does physical object have a level?
+        public int Level { get; private set; }
         public Common.Abilities.Abilities Abilities { get; set; }
         public Common.Abilities.Abilities.AbilityEnum SpellCastingAbility { get; set; }
         public Abstractions.SavingThrows.SavingThrows SavingThrows { get; set; }
@@ -25,19 +25,17 @@ namespace Common
         public ICollection<PassiveSkill> PassiveSkills { get; set; }
         public ICollection<IAction> Actions { get; set; }
         public int Reach { get; set; }
-        public int Initiative => Abilities.Dexterity.Modifier + _initiativeRoll;
-        private int _initiativeRoll => Dice.Roll(20, 1);
+        public readonly int Initiative;
+
+        public readonly int PassivePerception;
 
         public int RollToHit => Dice.Roll(20, 1) +
                                 ProficiencyBonus.LookupProficiencyBonusByLevel(Level);
 
-        public Action<int, int, int> HitPointCalculation { get; }
-
-
         public Character(
-            SizeEnum size,
+            Size size,
             int armorClass,
-            int hitPoints,
+            Dice hitDice,
             ICollection<DamageType> damageResistances,
             ICollection<DamageType> damageImmunities,
             Point pointOnMap,
@@ -54,7 +52,7 @@ namespace Common
             int reach
         ) : base(
             size: size,
-            hitPoints: hitPoints,
+            hitDice: hitDice,
             armorClass: armorClass,
             damageImmunities: damageImmunities,
             damageResistances: damageResistances,
@@ -69,6 +67,7 @@ namespace Common
             PassiveSkills = passiveSkills;
             Reach = reach;
 
+
             // Add all the "base" actions that every character has access to
             Actions = new List<IAction> {new UnarmedStrike(this)};
 
@@ -76,6 +75,12 @@ namespace Common
             {
                 Actions.Add(action);
             }
+            
+            //------------------------------------
+            // Calculations
+            //------------------------------------
+            Initiative = Calculate.Initiative(Abilities.Dexterity.Modifier);
+            PassivePerception = Calculate.PassivePerception(Abilities.Wisdom.Modifier);
         }
     }
 }

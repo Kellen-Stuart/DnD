@@ -1,6 +1,6 @@
 namespace Common.Abstractions.Size
 {
-    public enum SizeEnum
+    public enum Size
     {
         Tiny,
         Small,
@@ -12,22 +12,22 @@ namespace Common.Abstractions.Size
 
     public static class SizeChart
     {
-        public static SizeEnum LookupSize(System.Drawing.Size size)
+        public static Size LookupSize(System.Drawing.Size size)
         {
             var totalSize = TotalSize(size);
             
             if (totalSize <= 5)
-                return SizeEnum.Tiny;
+                return Size.Tiny;
             if (totalSize > 5 && totalSize <= 10)
-                return SizeEnum.Small;
+                return Size.Small;
             if (totalSize > 10 && totalSize <= 15)
-                return SizeEnum.Medium;
+                return Size.Medium;
             if (totalSize > 15 && totalSize <= 20)
-                return SizeEnum.Large;
+                return Size.Large;
             if (totalSize > 20 && totalSize <= 25)
-                return SizeEnum.Huge;
+                return Size.Huge;
 
-            return SizeEnum.Gargantuan;
+            return Size.Gargantuan;
         }
 
         private static decimal TotalSize(System.Drawing.Size size)

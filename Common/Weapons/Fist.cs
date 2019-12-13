@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Common.Weapons.Abstractions;
 using Common.Abstractions.DamageTypes;
 
 namespace Common.Weapons
@@ -7,13 +6,14 @@ namespace Common.Weapons
     public class Fist : Weapon
     {
         public Fist() : base(
-            baseDamage: 1,
-            weaponTypes: new List<WeaponType>
+            baseDamage: new Dice(1, 1), 
+            weaponTypes: new List<WeaponProperties>
             {
-                Weapons.Abstractions.WeaponType.Melee,
-                Weapons.Abstractions.WeaponType.Ranged
+                WeaponProperties.Melee
             },
-            damageType: DamageType.Bludgeoning)
+            damageType: DamageType.Bludgeoning,
+            rarity: Rarity.Standard,
+            range: new Range(5, null))
         {
         }
     }

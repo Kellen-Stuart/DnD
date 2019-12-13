@@ -2,14 +2,15 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
+        <RootNamespace>Entity</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="EntityFramework" Version="6.3.0" />
+      <ProjectReference Include="..\Common\Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Common\Common.csproj" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
     </ItemGroup>
 
 </Project>

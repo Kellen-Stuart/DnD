@@ -2,16 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using Common.Abstractions.DamageTypes;
-using Common.Abstractions.Size;
+using Size = Common.Abstractions.Size.Size;
 
 namespace Common
 {
     public abstract class PhysicalObject
     {
         // The order of instance variables should follow DnD Beyond Monster Manual
-        public SizeEnum Size { get; private set; }
+        public Size Size { get; private set; }
         
-        public int HitPoints { get; protected set; }
+        protected Dice HitDice { get; set; }
+
+        public static int HitPoints { get; private set; }
+
+        public int Average => HitDice.Average();
         
         public int ArmorClass { get; private set; }
 
@@ -25,8 +29,8 @@ namespace Common
 
 
         public PhysicalObject(
-            SizeEnum size,
-            int hitPoints,
+            Size size,
+            Dice hitDice,
             int armorClass,
             ICollection<DamageType> damageImmunities,
             ICollection<DamageType> damageResistances,
@@ -34,11 +38,14 @@ namespace Common
         )
         {
             Size = size;
-            HitPoints = hitPoints;
+            HitDice = hitDice;
             ArmorClass = armorClass;
             DamageImmunities = damageImmunities;
             DamageResistances = damageResistances;
             PointOnMap = pointOnMap;
+            
+            // HitPoints will change with each new object creation
+            HitPoints = HitDice.Roll();
         }
 
 
@@ -57,7 +64,7 @@ namespace Common
 
             // Condition?
 
-            HitPoints -= damage;
+            HitPoints-= damage;
         }
 
         public bool ImmuneTo(DamageType damageType)

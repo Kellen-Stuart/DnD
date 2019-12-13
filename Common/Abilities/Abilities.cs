@@ -30,7 +30,8 @@ namespace Common.Abilities
             Dexterity,
             Constitution,
             Intelligence,
-            Wisdom
+            Wisdom,
+            Charisma
         }
     }
 }

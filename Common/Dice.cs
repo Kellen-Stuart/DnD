@@ -1,6 +1,4 @@
-using System;
 using System.Security.Cryptography;
-using Common.Map;
 
 namespace Common
 {
@@ -9,35 +7,35 @@ namespace Common
     {
         private readonly int _rolls;
         private readonly int _numberOfSides;
+        private readonly int _modifier;
 
-        public Dice(int rolls, int numberOfSides)
+        public Dice(int rolls, int numberOfSides, int modifier = 0)
         {
             _rolls = rolls;
             _numberOfSides = numberOfSides;
+            _modifier = modifier;
         }
 
-        public int Roll()
+        public virtual int Roll()
         {
-            return Roll(_rolls, _numberOfSides);
+            return Roll(_rolls, _numberOfSides, _modifier);
         }
-        
-        public static int Roll(int rolls, int numberOfSides)
+
+        public int Average()
         {
-            int total = 0;
-            foreach (int roll in rolls)
+            return (_rolls * _numberOfSides + _modifier) / 2;
+        }
+
+    public static int Roll(int rolls, int numberOfSides, int modifier = 0)
+        {
+            var total = 0;
+            for(var i=0; i < rolls; i++)
             {
                 total += RandomNumberGenerator.GetInt32(1, (numberOfSides + 1));
             }
 
-            return total;
+            return total + modifier;
         }
-
-        public static int RollHitPoints(int rolls, int numberOfSides, int constitutionModifier = 0)
-        {
-            int hitPoints = Roll(rolls, numberOfSides);
-            
-            int staticModifier = rolls * constitutionModifier;
-            return hitPoints + staticModifier;
-        }
+        
     }
 }

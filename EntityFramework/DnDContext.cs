@@ -1,6 +1,5 @@
-﻿using System;
-using System.Data.Entity;
-using Common;
+﻿using Common;
+using Microsoft.EntityFrameworkCore;
 
 namespace Entity
 {

@@ -5,8 +5,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Dice\Dice.csproj" />
-    </ItemGroup>
-
 </Project>
