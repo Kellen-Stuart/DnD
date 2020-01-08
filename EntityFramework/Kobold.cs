@@ -9,7 +9,10 @@ using Common.Abstractions.Languages;
 using Common.Abstractions.SavingThrows;
 using Common.Abstractions.Senses;
 using Common.Actions.Abstractions;
+using Common.Actions.Attacks.Physical;
 using Common.PassiveSkills;
+using Common.Weapons;
+using Dagger = Common.Actions.Attacks.Physical.Dagger;
 using Size = Common.Abstractions.Size.Size;
 
 namespace Entity
@@ -54,12 +57,15 @@ namespace Entity
                     },
                     actions: new List<IAction>
                     {
-                        // todo
+                        // Dagger
+                        // Sling
                     },
                     spellCastingAbility: Abilities.AbilityEnum.Charisma,
                     savingThrows: new SavingThrows(), // todo
                     reach: 5
                 );
+                
+                kobold.Actions.Add(new Dagger(kobold));
 
                 context.Characters.Add(kobold);
                 context.SaveChanges();

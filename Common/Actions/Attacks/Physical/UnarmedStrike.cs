@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using Common.Abstractions.DamageTypes;
 using Common.Actions.Abstractions;
 using Common.Weapons;
@@ -22,35 +21,16 @@ namespace Common.Actions.Attacks.Physical
             _attacker = attacker;
         }
 
-        // TODO: this method is violating SRP
-        public override void Execute(Point point)
+        // At this point, we're assuming the attack is a hit
+        public override void Execute(Character target)
         {
-            // Get the target
-            var target = Global.Map.GetPhysicalObject(point); // assuming there is in fact a target and not null
-
-            // Is the attack within range? 
-            if (Range >= _attacker.PointOnMap.CalculateDistance(point))
-            {
-                // Does the attack hit? 
-                if (_attacker.RollToHit >= target.ArmorClass)
-                {
-                    target.TakeDamage(
-                        damage: CalculateDamage(),
-                        damageType: DamageType,
-                        numberOfHits: 1);
-                }
-                else
-                {
-                    Console.WriteLine($"Attacker has missed ${nameof(UnarmedStrike)}!");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Attacker is not in range of the target.");
-            }
+            target.TakeDamage(
+                damage: CalculateDamage(),
+                damageType: DamageType,
+                numberOfHits: 1);
         }
-        
-        public override void Execute(ICollection<Point> points)
+
+        public override void Execute(ICollection<Character> characters)
         {
             throw new Exception("Unarmed strike cannot be targeted at multiple points");
         }
@@ -58,7 +38,7 @@ namespace Common.Actions.Attacks.Physical
         // d20 + proficiency bonus + Str modifier
         private int CalculateDamage()
         {
-            return _attacker.Abilities.Strength.Modifier + Weapon.BaseDamage;
+            return _attacker.Abilities.Strength.Modifier + Weapon.BaseDamage.Roll();
         }
     }
 }

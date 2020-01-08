@@ -13,9 +13,9 @@ namespace Common.Actions.Abstractions
         {
             Weapon = weapon;
         }
-        
-        public abstract override void Execute(Point point);
 
-        public abstract override void Execute(ICollection<Point> points);
+        public abstract override void Execute(Character character);
+
+        public abstract override void Execute(ICollection<Character> characters);
     }
 }
