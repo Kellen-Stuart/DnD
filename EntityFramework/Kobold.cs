@@ -24,12 +24,12 @@ namespace Entity
             using (var context = new DnDContext())
             {
                 var kobldAbilities = new Abilities(
-                    strength: new Strength(7, -2),
-                    dexterity: new Dexterity(15, 2),
-                    constitution: new Constitution(9, -1),
-                    intelligence: new Intelligence(8, -1),
-                    wisdom: new Wisdom(7, -2),
-                    charisma: new Charisma(8, -1));
+                    new Strength(7, -2),
+                    new Dexterity(15, 2),
+                    new Constitution(9, -1),
+                    new Intelligence(8, -1),
+                    new Wisdom(7, -2),
+                    new Charisma(8, -1));
 
                 Character kobold = new Character(
                     size: Size.Small,
@@ -43,6 +43,7 @@ namespace Entity
                     conditionImmunities: new List<Condition>(),
                     senses: new List<Sense>
                     {
+                        // todo - create senses
                         // Darkvision
                     },
                     languages: new List<Language>
@@ -61,7 +62,7 @@ namespace Entity
                         // Sling
                     },
                     spellCastingAbility: Abilities.AbilityEnum.Charisma,
-                    savingThrows: new SavingThrows(), // todo
+                    savingThrows: new SavingThrows(), // todo - create saving throws
                     reach: 5
                 );
                 
