@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using Common.Abstractions.DamageTypes;
 using Common.Actions.Abstractions;
-using Common.Weapons;
 
 namespace Common.Actions.Attacks.Physical
 {
