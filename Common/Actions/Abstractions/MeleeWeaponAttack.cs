@@ -9,13 +9,13 @@ namespace Common.Actions.Abstractions
     {
         public Weapon Weapon { get; private set; }
         
-        protected MeleeWeaponAttack(DamageType damageType, int range, Weapon weapon) : base(damageType, range)
+        protected MeleeWeaponAttack(Character assailant, Weapon weapon) : base(assailant)
         {
             Weapon = weapon;
         }
 
-        public abstract override void Execute(Character character);
+        public abstract override void Execute(Character victim);
 
-        public abstract override void Execute(ICollection<Character> characters);
+        public abstract override void Execute(ICollection<Character> victims);
     }
 }

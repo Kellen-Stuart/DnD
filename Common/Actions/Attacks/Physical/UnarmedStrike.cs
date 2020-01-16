@@ -8,29 +8,24 @@ namespace Common.Actions.Attacks.Physical
 {
     public class UnarmedStrike : MeleeWeaponAttack
     {
-        private readonly Character _attacker;
-
-        // The arguments are all dependent on the character
-        public UnarmedStrike(Character attacker) :
+        public UnarmedStrike(Character assailant) :
             base(
-                weapon: new Fist(),
-                damageType: DamageType.Bludgeoning,
-                range: attacker.Reach
+                assailant: assailant,
+                weapon: new Fist()
             )
         {
-            _attacker = attacker;
         }
 
         // At this point, we're assuming the attack is a hit
-        public override void Execute(Character target)
+        public override void Execute(Character victim)
         {
-            target.TakeDamage(
+            victim.TakeDamage(
                 damage: CalculateDamage(),
-                damageType: DamageType,
+                damageType: DamageType.Bludgeoning,
                 numberOfHits: 1);
         }
 
-        public override void Execute(ICollection<Character> characters)
+        public override void Execute(ICollection<Character> victims)
         {
             throw new Exception("Unarmed strike cannot be targeted at multiple points");
         }
@@ -38,7 +33,7 @@ namespace Common.Actions.Attacks.Physical
         // d20 + proficiency bonus + Str modifier
         private int CalculateDamage()
         {
-            return _attacker.Abilities.Strength.Modifier + Weapon.BaseDamage.Roll();
+            return Assailant.Abilities.Strength.Modifier + Weapon.BaseDamage.Roll();
         }
     }
 }

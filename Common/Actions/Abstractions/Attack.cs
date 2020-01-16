@@ -10,19 +10,14 @@ namespace Common.Actions.Abstractions
     // 2) Spell Attack
     public abstract class Attack : IAction
     {
-        // Both spells and melee attacks have a range
-        protected readonly int Range;
-
-        // There is a SINGULAR damage type per attack
-        protected readonly DamageType DamageType;
-
-        protected Attack(DamageType damageType, int range)
+        protected Character Assailant;
+        
+        protected Attack(Character assailant)
         {
-            Range = range;
+            Assailant = assailant;
         }
 
-
-        public abstract void Execute(Character character);
-        public abstract void Execute(ICollection<Character> characters);
+        public abstract void Execute(Character victim);
+        public abstract void Execute(ICollection<Character> victims);
     }
 }

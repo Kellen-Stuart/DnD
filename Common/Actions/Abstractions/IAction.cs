@@ -5,7 +5,7 @@ namespace Common.Actions.Abstractions
 {
     public interface IAction
     {
-        void Execute(Character character);
-        void Execute(ICollection<Character> characters);
+        void Execute(Character victim);
+        void Execute(ICollection<Character> victims);
     }
 }

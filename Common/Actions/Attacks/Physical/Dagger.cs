@@ -9,19 +9,27 @@ namespace Common.Actions.Attacks.Physical
 {
     public class Dagger : MeleeWeaponAttack
     {
-        public Dagger(Character attacker) 
-            : base(DamageType.Piercing, attacker.Reach, new Weapons.Dagger())
+        public Dagger(Character assailant) : base(assailant, new Weapons.Dagger())
         {
         }
 
-        public override void Execute(Point point)
+        public override void Execute(Character victim)
         {
-            throw new System.NotImplementedException();
+            victim.TakeDamage(
+                damage: CalculateDamage(),
+                DamageType.Piercing,
+                numberOfHits: 1
+            );
         }
 
-        public override void Execute(ICollection<Point> points)
+        public override void Execute(ICollection<Character> victims)
         {
-            throw new Exception($"Unable to strike more than one target with {nameof(Weapons.Dagger)}");
+            throw new Exception("Unable to perform dagger attack on multiple enemies.");
+        }
+
+        private int CalculateDamage()
+        {
+            return Weapon.BaseDamage.Roll() + Assailant.Abilities.Dexterity.Modifier;
         }
     }
 }
