@@ -7,7 +7,7 @@ using Common.Abstractions.Languages;
 using Common.Actions.Abstractions;
 using Common.Actions.Attacks.Physical;
 using PassiveSkill = Common.PassiveSkills.PassiveSkill;
-using Sense = Common.Abstractions.Senses.Sense;
+using Sense = Common.Senses.Sense;
 using Size = Common.Abstractions.Size.Size;
 
 namespace Common

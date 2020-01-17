@@ -7,10 +7,10 @@ using Common.Abstractions.Conditions;
 using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
 using Common.Abstractions.SavingThrows;
-using Common.Abstractions.Senses;
 using Common.Actions.Abstractions;
 using Common.Actions.Attacks.Physical;
 using Common.PassiveSkills;
+using Common.Senses;
 using Common.Weapons;
 using Dagger = Common.Actions.Attacks.Physical.Dagger;
 using Size = Common.Abstractions.Size.Size;
@@ -43,6 +43,7 @@ namespace Entity
                     conditionImmunities: new List<Condition>(),
                     senses: new List<Sense>
                     {
+                        
                         // todo - create senses
                         // Darkvision
                     },

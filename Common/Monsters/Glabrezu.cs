@@ -6,7 +6,6 @@ using Common.Abstractions.DamageTypes;
 using Common.Abstractions.Languages;
 using Common.Abstractions.PassiveSkills;
 using Common.Abstractions.SavingThrows;
-using Common.Abstractions.Senses;
 using Common.Actions;
 using Common.Actions.Attacks;
 
