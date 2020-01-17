@@ -11,7 +11,12 @@ namespace Common.Weapons
         public Rarity Rarity;
         public Range Range;
 
-        protected Weapon(Dice baseDamage, ICollection<WeaponProperties> weaponTypes, DamageType damageType, Rarity rarity, Range range)
+        protected Weapon(
+            Dice baseDamage, 
+            ICollection<WeaponProperties> weaponTypes, 
+            DamageType damageType,
+            Rarity rarity, 
+            Range range)
         {
             BaseDamage = baseDamage;
             WeaponType = weaponTypes;
